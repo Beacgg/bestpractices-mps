@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continúa Aprendiendo - IA en Farma: MPS</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .improve-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .improve-icon {
+            font-size: 4rem;
+            color: #dc2626;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .improve-title {
+            color: #dc2626;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .recommendation-section {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .recommendation-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .recommendation-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .recommendation-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .recommendation-list li::before {
+            content: "→";
+            color: #dc2626;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="assets/logo.png" alt="Meiji Logo" class="logo">
+        </header>
+
+        <main>
+            <div class="improve-container">
+                <div class="improve-icon">📚</div>
+                <h1 class="improve-title">Continúa Tu Aprendizaje</h1>
+                <p>Has completado la evaluación sobre IA en el sector farmacéutico. Hemos identificado algunas áreas en las que puedes profundizar para mejorar tu comprensión y aplicación de la IA.</p>
+                
+                <div class="recommendation-section">
+                    <h3>Recomendaciones Personalizadas</h3>
+                    <ul class="recommendation-list" id="personalRecommendations">
+                        <!-- Las recomendaciones se cargarán dinámicamente -->
+                        <li>Revisa la sección "Riesgos y Seguridad" para fortalecer tu comprensión sobre las consideraciones de seguridad.</li>
+                        <li>Profundiza en las técnicas para formular prompts efectivos en la sección "Guía de Uso".</li>
+                        <li>Explora los "Flujos de Trabajo Integrados" para entender mejor cómo incorporar la IA en tus procesos diarios.</li>
+                    </ul>
+                </div>
+                
+                <h3>Próximos Pasos</h3>
+                <p>Te animamos a:</p>
+                <ul>
+                    <li>Volver a revisar las secciones recomendadas</li>
+                    <li>Practicar con los ejemplos específicos para tu departamento</li>
+                    <li>Realizar nuevamente el quiz cuando te sientas preparado</li>
+                </ul>
+                
+                <p>Recuerda que este es un proceso de aprendizaje continuo. La comprensión y aplicación efectiva de la IA se desarrolla con la práctica y la experiencia.</p>
+                
+                <div class="action-buttons">
+                    <!-- Reemplaza este botón en improve.html -->
+                    <button class="action-button primary" onclick="window.location.href='main.html#quiz'">Reintentar Quiz</button>
+                    <button class="action-button secondary" onclick="window.location.href='main.html'">Volver al Manual</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            © 2025 Meiji Pharma Spain, S.A. Todos los derechos reservados.
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cargar recomendaciones desde localStorage
+            const quizScores = JSON.parse(localStorage.getItem('quizScores') || '{}');
+            const recommendationsList = document.getElementById('personalRecommendations');
+            
+            if (quizScores.detailResponses) {
+                // Limpiar lista actual
+                recommendationsList.innerHTML = '';
+                
+                // Filtrar respuestas incorrectas
+                const incorrectResponses = quizScores.detailResponses.filter(response => !response.correct);
+                
+                if (incorrectResponses.length === 0) {
+                    recommendationsList.innerHTML = '<li>¡Has contestado todo correctamente! Sin embargo, te recomendamos revisar regularmente el contenido para mantener actualizados tus conocimientos.</li>';
+                } else {
+                    // Generar recomendaciones específicas
+                    incorrectResponses.forEach(response => {
+                        let recommendation = '';
+                        
+                        // Recomendaciones específicas según la pregunta
+                        switch(response.question) {
+                            case 1:
+                                recommendation = 'Revisa la sección de "Riesgos y Seguridad" para entender qué tipo de información nunca debe compartirse con ChatGPT.';
+                                break;
+                            case 2:
+                                recommendation = 'Consulta la sección "Guía de Uso" para comprender cómo formular prompts efectivos.';
+                                break;
+                            case 3:
+                                recommendation = 'Repasa la sección "Protocolo de Seguridad para MPS" para conocer las prácticas correctas al manejar datos de producción.';
+                                break;
+                            case 4:
+                                recommendation = 'Revisa las limitaciones de ChatGPT en la sección "Aplicaciones Prácticas Avanzadas".';
+                                break;
+                            case 5:
+                                recommendation = 'Consulta la sección "Trabajando con Documentos" para aprender técnicas de manejo de documentos extensos.';
+                                break;
+                            case 6:
+                                recommendation = 'Revisa el "Procedimiento de Notificación de Incidentes" en la sección de Riesgos y Seguridad.';
+                                break;
+                            case 7:
+                                recommendation = 'Consulta "Flujos de Trabajo Integrados" en la sección de Aplicaciones Prácticas Avanzadas.';
+                                break;
+                            case 8:
+                                recommendation = 'Revisa las mejores prácticas en "Integración con Herramientas Cotidianas".';
+                                break;
+                            case 9:
+                                recommendation = 'Consulta la "Matriz de Riesgo por Departamento" en la sección de Riesgos y Seguridad.';
+                                break;
+                            case 10:
+                                recommendation = 'Repasa las "Prácticas a Evitar" en la sección de Riesgos y Seguridad.';
+                                break;
+                            default:
+                                recommendation = 'Revisa nuevamente el contenido del manual para reforzar tus conocimientos.';
+                        }
+                        
+                        const li = document.createElement('li');
+                        li.textContent = recommendation;
+                        recommendationsList.appendChild(li);
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

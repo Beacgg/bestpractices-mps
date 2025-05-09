@@ -1,0 +1,2214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA en Farma: Manual de Buenas Prácticas y Casos de Éxito - MPS</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/aplicaciones-practicas.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="top-header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="Meiji Logo" class="logo">
+            </div>
+            <div class="user-info">
+                <span class="department-badge" id="userDepartment">Departamento</span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="breadcrumbs-content" id="breadcrumbs">
+            <span>Inicio</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <div class="nav-menu">
+                <div class="nav-item active" data-section="introduccion">Introducción a la IA</div>
+                <div class="nav-item" data-section="primeros-pasos">Primeros Pasos con IA</div>
+                <div class="nav-item" data-section="guia-uso">Guía de Uso</div>
+                <div class="nav-item" data-section="casos">Aplicaciones Prácticas Avanzadas</div>
+                <div class="nav-item" data-section="potencial-farma">Potencial en Farma</div>
+                <div class="nav-item" data-section="ia-sistemas">IA y Sistemas de Gestión</div>
+                <div class="nav-item" data-section="riesgos">Riesgos y Seguridad</div>
+                <div class="nav-item" data-section="quiz">Quiz Interactivo</div>
+            </div>
+        </div>
+
+        <!-- Content Area -->
+        <main class="content">
+            <!-- Sección de Introducción -->
+<section id="introduccion">
+    <h1>Introducción a la IA en el Sector Farmacéutico</h1>
+    
+    <div class="content-block">
+        <h2>¿Qué es la IA y Por Qué es Relevante?</h2>
+        <p>La Inteligencia Artificial (IA) representa un conjunto de tecnologías que permiten a las máquinas aprender de la experiencia, ajustarse a nueva información y realizar tareas similares a las humanas. En el sector farmacéutico, la IA está revolucionando desde el desarrollo de nuevos productos hasta la gestión de la calidad.</p>
+        
+        <div class="info-card"> 
+            <h4>Tendencias del Sector</h4>
+            <ul>
+                <li><strong>Las farmacéuticas lideran la integración de IA</strong> en todas las etapas del ciclo de vida del medicamento. <span class="source-note" style="font-size: 0.8rem; font-style: italic;">Fuente: Farmaindustria – Web de prensa, 2024</span></li>
+                <li><strong>La IA generativa impulsa diagnósticos más precisos</strong> y tratamientos personalizados en salud. <span class="source-note" style="font-size: 0.8rem; font-style: italic;">Fuente: Deloitte – "Artificial Intelligence: Overview of the Life Sciences & Health Care Policy Landscape", 2023</span></li>
+                <li><strong>La revolución de la IA en salud</strong> exige políticas públicas basadas en confianza, equidad y transparencia. <span class="source-note" style="font-size: 0.8rem; font-style: italic;">Fuente: Deloitte – "Artificial Intelligence: Overview of the Life Sciences & Health Care Policy Landscape", 2023</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content-block">
+        <h2>ChatGPT en el Entorno Farmacéutico</h2>
+        <p>ChatGPT es una herramienta de IA conversacional que puede ayudarnos a optimizar numerosos procesos en MPS. Su capacidad para entender y generar texto lo hace especialmente útil para:</p>
+        
+        <div class="two-column-grid">
+            <div class="feature-card">
+                <h4>Documentación del Sistema de Calidad</h4>
+                <p>Asistencia en la redacción y revisión de procedimientos normalizados de trabajo (PNTs), optimizando el tiempo dedicado a la documentación mientras mantenemos los estándares de calidad.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h4>Análisis de Datos</h4>
+                <p>Apoyo en la interpretación de datos de control de calidad, tendencias de producción y análisis de desviaciones, permitiendo una toma de decisiones más informada.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-block">
+        <h2>Beneficios para MPS</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <h4>Eficiencia Operativa</h4>
+                <p>Reducción del tiempo dedicado a tareas administrativas y documentación</p>
+            </div>
+            <div class="benefit-item">
+                <h4>Mejora en la Calidad</h4>
+                <p>Mayor consistencia en la documentación y reducción de errores humanos</p>
+            </div>
+            <div class="benefit-item">
+                <h4>Cumplimiento Normativo</h4>
+                <p>Mejor seguimiento y actualización de requisitos regulatorios</p>
+            </div>
+            <div class="benefit-item">
+                <h4>Innovación</h4>
+                <p>Adopción de tecnologías punteras para mantener la competitividad</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-block">
+        <div class="alert-box important">
+            <h3>Importante</h3>
+            <p>Esta guía está diseñada específicamente para el personal de MPS, considerando nuestros procesos internos y requisitos regulatorios. Todos los ejemplos y casos de uso han sido adaptados a nuestro contexto específico.</p>
+        </div>
+    </div>
+
+    <div class="content-block">
+        <h2>Próximos Pasos</h2>
+        <p>En las siguientes secciones, aprenderás:</p>
+        <ul class="next-steps">
+            <li>Cómo comenzar a utilizar ChatGPT de manera segura</li>
+            <li>Mejores prácticas para formular consultas efectivas</li>
+            <li>Casos de uso específicos para tu departamento</li>
+            <li>Consideraciones de seguridad y confidencialidad</li>
+        </ul>
+    </div>
+
+    <div class="content-block">
+        <div class="next-section-preview">
+            <h3>¿Listo para comenzar?</h3>
+            <p>En la siguiente sección aprenderás los primeros pasos para comenzar a usar ChatGPT y entender cómo puede ayudarte en tu día a día en MPS.</p>
+            <button class="next-button" onclick="NavigationManager.navigateToSection('primeros-pasos')">
+                Continuar a Primeros Pasos con IA →
+            </button>
+        </div>
+    </div>
+</section>
+            
+          <!-- Sección de Primeros Pasos -->
+          <section id="primeros-pasos" style="display: none;">
+            <h1>Primeros Pasos con IA</h1>
+        
+            <!-- Hero Banner -->
+            <div class="hero-banner">
+                <div class="hero-content">
+                    <h2>Tu Viaje con ChatGPT Comienza Aquí</h2>
+                    <p>Descubre cómo esta herramienta puede transformar tu trabajo diario en MPS</p>
+                </div>
+            </div>
+        
+            <!-- Paso 1: Acceso (VERSIÓN REDISEÑADA) -->
+<div class="content-block">
+    <h2>Accediendo a ChatGPT</h2>
+    
+    <div class="registration-access-card">
+        <div class="registration-header">
+            <h3>Registro y Acceso</h3>
+        </div>
+        <div class="registration-steps">
+            <div class="reg-step">
+                <div class="reg-step-number">1</div>
+                <div class="reg-step-content">
+                    <p>Visita <a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer">chat.openai.com</a></p>
+                </div>
+            </div>
+            
+            <div class="reg-step">
+                <div class="reg-step-number">2</div>
+                <div class="reg-step-content">
+                    <p>Haz clic en "Iniciar sesión" en la parte superior derecha</p>
+                </div>
+            </div>
+            
+            <div class="reg-step">
+                <div class="reg-step-number">3</div>
+                <div class="reg-step-content">
+                    <p>Elige una de estas opciones:</p>
+                    <ul>
+                        <li>Da clic en "Continuar con Google" y usa tu cuenta corporativa de Meiji</li>
+                        <li>O regístrate con tu correo corporativo (@meiji.es) y crea una contraseña</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="reg-step">
+                <div class="reg-step-number">4</div>
+                <div class="reg-step-content">
+                    <p>¡Listo para comenzar!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+                <!-- Nueva sección explicando qué son los prompts -->
+                <div class="explanation-card">
+                    <div class="card-header">
+                        <h3>¿Qué son los Prompts?</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Los "prompts" son las instrucciones o preguntas que escribimos a ChatGPT. Es como tener una conversación por escrito con un asistente muy capacitado. Por ejemplo:</p>
+                        
+                        <div class="prompt-examples">
+                            <div class="prompt-example">
+                                <span class="prompt-label">Prompt básico:</span>
+                                <p class="prompt-text">"Quiero conocer cómo se cumple con el control de calidad en la industria farmacéutica."</p>
+                            </div>
+                            
+                            <div class="prompt-example">
+                                <span class="prompt-label">Prompt detallado:</span>
+                                <p class="prompt-text">"Estoy revisando los procedimientos de control de calidad en la fabricación de medicamentos sólidos orales. Necesito una descripción clara y estructurada de las etapas clave del proceso, incluyendo pruebas fisicoquímicas, microbiológicas y de estabilidad. Por favor, enfócate en las normativas de buenas pácticas de fabricación y da ejemplos."</p>
+                            </div>
+                        </div>
+                        
+                        <p class="tip">💡 Piensa en los prompts como las instrucciones que darías a un nuevo compañero: cuanto más claras y específicas sean, mejor será el resultado.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Paso 2: Interfaz -->
+           
+            <div class="content-block step-block">
+                <div class="step-number">2</div>
+                <h2>Conociendo la Interfaz</h2>
+            
+                <!-- Imagen con los números ya incluidos manualmente -->
+                <div class="interface-container">
+                    <img src="assets/pantalla.png" alt="Interfaz de ChatGPT" class="interface-img">
+                </div>
+                
+                <!-- Leyenda horizontal (tres columnas) -->
+                <div class="interface-legend">
+                    <div class="legend-item">
+                        <div class="legend-number">1</div>
+                        <div class="legend-text">
+                            <h4>Historial</h4>
+                            <p>Panel lateral donde encontrarás tus conversaciones previas y podrás iniciar nuevas chats</p>
+                        </div>
+                    </div>
+                    
+                    <div class="legend-item">
+                        <div class="legend-number">2</div>
+                        <div class="legend-text">
+                            <h4>Área de Chat</h4>
+                            <p>Zona central donde se desarrolla la conversación con ChatGPT</p>
+                        </div>
+                    </div>
+                    
+                    <div class="legend-item">
+                        <div class="legend-number">3</div>
+                        <div class="legend-text">
+                            <h4>Campo de Entrada</h4>
+                            <p>Barra inferior donde escribes tus preguntas, instrucciones o prompts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 3: Primeras Interacciones -->
+            <div class="content-block step-block">
+                <div class="step-number">3</div>
+                <h2>Tus Primeras Interacciones</h2>
+        
+                <div class="example-grid">
+                    <div class="example-card good">
+                        <h4>Consultas Efectivas ✓</h4>
+                        <div class="example-content">
+                            <p class="prompt">"¿Cuáles son los criterios clave para aprobar una auditoría del sistema de calidad en la fabricación de medicamentos estériles?"</p>
+                            <p class="explanation">Clara, específica y relacionada con el trabajo</p>
+                        </div>
+                    </div>
+        
+                    <div class="example-card bad">
+                        <h4>Evitar ✗</h4>
+                        <div class="example-content">
+                            <p class="prompt">"Dime todo lo que debo saber sobre auditorías del sistema de calidad."</p>
+                            <p class="explanation">Demasiado amplia y poco específica</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Paso 4: Mejores Prácticas -->
+            <div class="content-block step-block">
+                <div class="step-number">4</div>
+                <h2>Mejores Prácticas Iniciales</h2>
+        
+                <div class="best-practices-grid">
+                    <div class="practice-card">
+                        <div class="practice-icon">🎯</div>
+                        <h4>Sé Específico</h4>
+                        <p>Cuanto más concreto seas en tus preguntas, mejores serán las respuestas</p>
+                    </div>
+                    <div class="practice-card">
+                        <div class="practice-icon">🔄</div>
+                        <h4>Repite y Mejora</h4>
+                        <p>No temas refinar tus preguntas para obtener mejores resultados</p>
+                    </div>
+                    <div class="practice-card">
+                        <div class="practice-icon">✏️</div>
+                        <h4>Toma Notas</h4>
+                        <p>Guarda los prompts que te funcionan bien para futuros usos</p>
+                    </div>
+                    <div class="practice-card">
+                        <div class="practice-icon">🔍</div>
+                        <h4>Verifica</h4>
+                        <p>Siempre valida la información crítica con fuentes oficiales</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Siguiente Paso -->
+            <div class="content-block">
+                <div class="next-section-preview">
+                    <h3>¿Y ahora qué?</h3>
+                    <p>En la siguiente sección, aprenderás técnicas avanzadas para formular prompts efectivos y específicos para tu rol en MPS.</p>
+                    <button class="next-button" onclick="NavigationManager.navigateToSection('guia-uso')">
+                        Continuar a Guía de Uso →
+                    </button>
+                </div>
+            </div>
+        </section>
+
+            <!-- Guía de Uso -->
+            <section id="guia-uso" style="display: none;">
+                <h1>Guía de Uso: Cómo Formular Prompts Efectivos</h1>
+            
+                <!-- Introducción -->
+                <div class="content-block">
+                    <div class="intro-banner">
+                        <h2>El Arte de Comunicarse con ChatGPT</h2>
+                        <p>Aprende a formular prompts que obtengan exactamente la información que necesitas</p>
+                    </div>
+                </div>
+            
+                <!-- Principios de prompts efectivos -->
+                <div class="content-block">
+                    <h2>Principios Para Prompts Efectivos</h2>
+                    <p>La calidad de las respuestas que obtengas de ChatGPT dependerá en gran medida de cómo formules tus preguntas. Estos son los principios fundamentales:</p>
+            
+                    <div class="principles-grid">
+                        <div class="principle-card">
+                            <div class="principle-number">01</div>
+                            <h3>Sé Específico</h3>
+                            <p>Cuanto más preciso seas en tu solicitud, más acertada será la respuesta. Incluye detalles relevantes.</p>
+                            <div class="examples-toggle" onclick="toggleExamples(this)"><strong>Ver ejemplos</strong></div>
+                            <div class="principle-examples">
+                                <div class="example basic">
+                                    <span>Básico:</span>
+                                    <p>"Háblame sobre documentación del sistema de calidad"</p>
+                                </div>
+                                <div class="example better">
+                                    <span>Mejor:</span>
+                                    <p>"Explícame los requisitos de documentación del sistema de calidad para el control de cambios en un laboratorio farmacéutico según la normativa europea"</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="principle-card">
+                            <div class="principle-number">02</div>
+                            <h3>Define el Formato</h3>
+                            <p>Indica el formato en que deseas recibir la información: lista, tabla, texto explicativo, paso a paso, etc.</p>
+                            <div class="examples-toggle" onclick="toggleExamples(this)"><strong>Ver ejemplos</strong></div>
+                            <div class="principle-examples">
+                                <div class="example basic">
+                                    <span>Básico:</span>
+                                    <p>"Dame información sobre farmacovigilancia"</p>
+                                </div>
+                                <div class="example better">
+                                    <span>Mejor:</span>
+                                    <p>"Crea una tabla con las 5 principales responsabilidades del departamento de farmacovigilancia, con una columna para la responsabilidad y otra para su impacto en la seguridad del paciente"</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="principle-card">
+                            <div class="principle-number">03</div>
+                            <h3>Proporciona Contexto</h3>
+                            <p>Explica para qué necesitas la información y en qué contexto la aplicarás.</p>
+                            <div class="examples-toggle" onclick="toggleExamples(this)"><strong>Ver ejemplos</strong></div>
+                            <div class="principle-examples">
+                                <div class="example basic">
+                                    <span>Básico:</span>
+                                    <p>"¿Cómo realizar una auditoría?"</p>
+                                </div>
+                                <div class="example better">
+                                    <span>Mejor:</span>
+                                    <p>"Soy parte del equipo de Garantía de Calidad de un laboratorio farmacéutico y necesito preparar una auditoría interna a producción. ¿Puedes ayudarme con una lista de verificación enfocada en puntos críticos de control?"</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="principle-card">
+                            <div class="principle-number">04</div>
+                            <h3>Establece el Nivel</h3>
+                            <p>Especifica el nivel de detalle o complejidad que necesitas en la respuesta.</p>
+                            <div class="examples-toggle" onclick="toggleExamples(this)"><strong>Ver ejemplos</strong></div>
+                            <div class="principle-examples">
+                                <div class="example basic">
+                                    <span>Básico:</span>
+                                    <p>"Explícame cómo hacer un análisis de costes"</p>
+                                </div>
+                                <div class="example better">
+                                    <span>Mejor:</span>
+                                    <p>"Necesito una guía detallada para realizar un análisis coste-beneficio de un proyecto de expansión de línea de producción. Incluye las principales métricas financieras a considerar (ROI, VAN, TIR), fórmulas básicas, y un ejemplo simplificado con números. El análisis debe ser comprensible para directivos no financieros."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Técnicas avanzadas -->
+                <div class="content-block">
+                    <h2>Técnicas Avanzadas</h2>
+                    <p>Lleva tus prompts al siguiente nivel con estas estrategias:</p>
+            
+                    <div class="techniques-grid">
+                        <div class="technique-card">
+                            <h3>Enfoque Paso a Paso</h3>
+                            <p>Estructura conversaciones complejas en pasos incrementales, refinando la información en cada etapa.</p>
+                            <div class="technique-dialog">
+                                <div class="message user">
+                                    "Necesito crear un procedimiento para la gestión de desviaciones. Comencemos con el alcance y objetivos."
+                                </div>
+                                <div class="message assistant">
+                                    [Respuesta de ChatGPT sobre alcance y objetivos]
+                                </div>
+                                <div class="message user">
+                                    "Excelente. Ahora, ¿qué secciones debería incluir para la identificación y clasificación de desviaciones?"
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="technique-card">
+                            <h3>Asignar un Rol</h3>
+                            <p>Indica a ChatGPT qué rol debe asumir para enfocar mejor sus respuestas.</p>
+                            <div class="technique-example">
+                                <p>"Actúa como un auditor del sistema de calidad experimentado y ayúdame a preparar una respuesta a estas observaciones de la última inspección..."</p>
+                            </div>
+                        </div>
+            
+                        <div class="technique-card">
+                            <h3>Solicitar Múltiples Perspectivas</h3>
+                            <p>Pide a ChatGPT que analice un problema desde diferentes ángulos.</p>
+                            <div class="technique-example">
+                                <p>"Analiza este plan de validación de proceso desde la perspectiva de: 1) Garantía de Calidad, 2) Producción, y 3) Autoridades regulatorias"</p>
+                            </div>
+                        </div>
+            
+                        <div class="technique-card">
+                            <h3>Ajuste progresivo</h3>
+                            <p>Utiliza respuestas previas para refinar tus siguientes preguntas.</p>
+                            <div class="technique-dialog">
+                                <div class="message user">
+                                    "Necesito analizar una tendencia en los datos de estabilidad de nuestro producto XYZ."
+                                </div>
+                                <div class="message assistant">
+                                    [Respuesta inicial de ChatGPT]
+                                </div>
+                                <div class="message user">
+                                    "Basado en tu análisis anterior, ¿qué factores ambientales podrían estar influyendo en la degradación acelerada?"
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Ejemplos por departamento -->
+<div class="content-block">
+    <h2>Prompts Adaptados a Tu Departamento</h2>
+    <p>A continuación encontrarás ejemplos específicos según tu área de trabajo. Selecciona tu departamento:</p>
+
+    <div class="department-selector">
+        <select id="deptSelect" onchange="showDepartmentExamples()">
+            <option value="">Selecciona tu departamento</option>
+            <option value="quality">Control de Calidad</option>
+            <option value="development">Desarrollo de Negocio</option>
+            <option value="finance">Finanzas</option>
+            <option value="gc">Garantía de Calidad</option>
+            <option value="it">IT</option>
+            <option value="id">Científico</option>
+            <option value="legal">Legal</option>
+            <option value="marketing">Marketing y Ventas</option>
+            <option value="medical">Departamento Médico</option>
+            <option value="production">Producción</option>
+            <option value="rrhh">RRHH</option> 
+        </select>
+    </div>
+
+    <!-- Ejemplos específicos por departamento -->
+    <div class="department-examples" id="deptExamples">
+        <div class="dept-example-container" id="quality-examples" style="display: none;">
+            <h3>Ejemplos para Control de Calidad</h3>
+            <div class="prompt-example-card">
+                <h4>Análisis de Tendencias</h4>
+                <div class="prompt-text">
+                    "Tengo los siguientes resultados de valoración de principio activo de los últimos 10 lotes: [95.2%, 94.8%, 94.9%, 95.1%, 94.7%, 94.5%, 94.3%, 94.1%, 94.0%, 93.8%]. La especificación es 94.0-96.0%. Analiza esta tendencia, indica si debemos preocuparnos y qué acciones preventivas podrían ser apropiadas."
+                </div>
+            </div>
+            <div class="prompt-example-card">
+                <h4>Investigación de Resultados Fuera de Especificación</h4>
+                <div class="prompt-text">
+                    "Ayúdame a estructurar una investigación de OOS para un resultado de disolución que está por debajo de la especificación. Necesito un enfoque sistemático que cumpla con las expectativas regulatorias."
+                </div>
+            </div>
+        </div>
+
+        <div class="dept-example-container" id="gc-examples" style="display: none;">
+            <h3>Ejemplos para Garantía de Calidad</h3>
+            <div class="prompt-example-card">
+                <h4>Preparación de Auditoría</h4>
+                <div class="prompt-text">
+                    "Crea una lista de verificación para auditar el sistema de gestión de control de cambios. Organiza los puntos por categorías: documentación, aprobaciones, evaluación de impacto y verificación post-implementación."
+                </div>
+            </div>
+            <div class="prompt-example-card">
+                <h4>Análisis de Desviaciones</h4>
+                <div class="prompt-text">
+                    "Ayúdame a desarrollar un sistema de clasificación de desviaciones basado en impacto en la calidad del producto, cumplimiento regulatorio y seguridad del paciente. Necesito categorías claras y criterios objetivos para cada nivel."
+                </div>
+            </div>
+        </div>
+
+        <div class="dept-example-container" id="commercial-examples" style="display: none;">
+            <h3>Ejemplos para Comercial</h3>
+            <div class="prompt-example-card">
+                <h4>Análisis de Mercado</h4>
+                <div class="prompt-text">
+                    "Necesito preparar un argumentario para la visita médica de nuestro producto XYZ. Ayúdame a estructurar los mensajes clave diferenciando entre eficacia, seguridad y coste-efectividad, considerando que estamos en un mercado altamente competitivo."
+                </div>
+            </div>
+            <div class="prompt-example-card">
+                <h4>Estrategia de Ventas</h4>
+                <div class="prompt-text">
+                    "Ayúdame a diseñar un plan de incentivos para el equipo comercial enfocado en nuestros productos. Necesito balancear objetivos de volumen con expansión a nuevos centros hospitalarios, manteniendo el enfoque en la rentabilidad."
+                </div>
+            </div>
+        </div>
+
+        <div class="dept-example-container" id="development-examples" style="display: none;">
+            <h3>Ejemplos para Desarrollo de Negocio</h3>
+            <div class="prompt-example-card">
+                <h4>Evaluación de Oportunidades</h4>
+                <div class="prompt-text">
+                    "Ayúdame a crear un marco de evaluación para posibles alianzas estratégicas en el sector de medicamentos genéricos. Necesito criterios objetivos que consideren aspectos técnicos, regulatorios, financieros y de acceso al mercado."
+                </div>
+            </div>
+            <div class="prompt-example-card">
+                <h4>Análisis Competitivo</h4>
+                <div class="prompt-text">
+                    "Necesito desarrollar una metodología para analizar el potencial de mercado de un nuevo producto para el tratamiento de la diabetes tipo 2. ¿Qué factores clave debería incluir en relación a competidores existentes, barreras de entrada y oportunidades de diferenciación?"
+                </div>
+            </div>
+        </div>
+
+        <div class="dept-example-container" id="finance-examples" style="display: none;">
+            <h3>Ejemplos para Finanzas</h3>
+            <div class="prompt-example-card">
+                <h4>Análisis de Inversiones</h4>
+                <div class="prompt-text">
+                    "Necesito una metodología para evaluar el retorno de inversión de un proyecto de automatización en la línea de envasado. Incluye las principales métricas financieras a considerar, así como factores no financieros relevantes como el impacto en calidad y cumplimiento normativo."
+                </div>
+            </div>
+            <div class="prompt-example-card">
+                <h4>Optimización de Costes</h4>
+                <div class="prompt-text">
+                    "Ayúdame a crear una metodología estructurada para identificar oportunidades de reducción de costes en nuestra cadena de suministro farmacéutica, manteniendo los estándares de calidad y considerando las restricciones regulatorias. Necesito un plan paso a paso que incluya KPIs relevantes."
+                </div>
+            </div>
+        </div>
+
+        <div class="dept-example-container" id="it-examples" style="display: none;">
+            <h3>Ejemplos para IT</h3>
+            <div class="prompt-example-card">
+                <h4>Validación de Sistemas</h4>
+                <div class="prompt-text">
+                    "Ayúdame a crear un plan de evaluación de vulnerabilidades en nuestros sistemas informáticos críticos. Necesito incluir aspectos de cumplimiento con normativas farmacéuticas, metodología de análisis de riesgos, y protocolos de respuesta alineados con las mejores prácticas en ciberseguridad."
+                </div>
+            </div>
+            <div class="prompt-example-card">
+                <h4>Seguridad de Datos</h4>
+                <div class="prompt-text">
+                    "Necesito desarrollar un programa de concienciación sobre ciberseguridad para todos los empleados de la compañía. Enfócate en los riesgos específicos para una empresa farmacéutica, considerando phishing, protección de datos sensibles y cumplimiento normativo en el entorno digital."
+                </div>
+            </div>
+        </div>
+
+        <div class="dept-example-container" id="id-examples" style="display: none;">
+            <h3>Ejemplos para Científico</h3>
+            <div class="prompt-example-card">
+                <h4>Análisis de Literatura Científica</h4>
+                <div class="prompt-text">
+                    "A partir del siguiente artículo realiza un análisis detallado que incluya el objetivo del estudio, el diseño del estudio, la población estudiada, los principales resultados, las conclusiones de los autores, las fortalezas y limitaciones, el nivel de evidencia, y la relevancia clínica."
+                </div>
+            </div>
+            <div class="prompt-example-card">
+                <h4>Diseño de Protocolos</h4>
+                <div class="prompt-text">
+                    "Redacta un borrador de protocolo para un estudio observacional de seguimiento postcomercialización, de ácido hialurónico intraarticular, en pacientes con artrosis de rodilla. El protocolo debe incluir el título del estudio, la justificación científica, los objetivos del estudio, el diseño del estudio, los criterios de inclusión/exclusión, la población diana y el tamaño muestral, las variables de seguridad, las variables de efectividad, las fuentes de datos, el análisis estadístico propuesto, las consideraciones éticas, y el cronograma del estudio."
+                </div>
+            </div>
+            <div class="prompt-example-card">
+                <h4>Identificación de Gaps</h4>
+                <div class="prompt-text">
+                    "Identifica brechas de conocimiento y necesidades médicas no cubiertas en el tratamiento de la neumonía adquirida en la comunidad. Basándote en la literatura científica actual y guías de práctica clínica, proporciona un análisis que incluya una visión general de los tratamientos actuales y su eficacia, las limitaciones de las terapias existentes, las poblaciones insuficientemente tratadas o estudiadas, las inconsistencias en la evidencia clínica, los aspectos no cubiertos en las guías actuales, las áreas con bajo nivel de innovación, y oportunidades para nuevos estudios."
+                </div>
+            </div>
+        </div>
+
+        <div class="dept-example-container" id="legal-examples" style="display: none;">
+            <h3>Ejemplos para Legal</h3>
+            <div class="prompt-example-card">
+                <h4>Revisión de Contratos</h4>
+                <div class="prompt-text">
+                    "Necesito una lista de verificación para revisar contratos con proveedores de servicios de farmacovigilancia. ¿Qué aspectos clave debería incluir respecto a confidencialidad, propiedad intelectual, cumplimiento normativo y responsabilidades específicas según la legislación farmacéutica europea?"
+                </div>
+            </div>
+            <div class="prompt-example-card">
+                <h4>Compliance Farmacéutico</h4>
+                <div class="prompt-text">
+                    "Ayúdame a estructurar un programa de capacitación sobre compliance para nuestros equipos de marketing y ventas. Necesito cubrir aspectos clave de la promoción ética de medicamentos, interacción con profesionales sanitarios, y transparencia en la industria farmacéutica."
+                </div>
+            </div>
+        </div>
+
+        <div class="dept-example-container" id="marketing-examples" style="display: none;">
+            <h3>Ejemplos para Marketing</h3>
+            <div class="prompt-example-card">
+                <h4>Estrategia de Contenidos</h4>
+                <div class="prompt-text">
+                    "Ayúdame a desarrollar un plan de contenidos para redes profesionales sobre nuestra línea de productos gastrointestinales. Necesito identificar temas relevantes para especialistas, estructurar un calendario editorial y definir KPIs apropiados, asegurando el cumplimiento de farmaindustria y la ley general del medicamento"
+                </div>
+            </div>
+            <div class="prompt-example-card">
+                <h4>Materiales Promocionales</h4>
+                <div class="prompt-text">
+                    "Necesito crear un briefing para el diseño de materiales promocionales de nuestro nuevo antibiótico. ¿Qué elementos clave debería incluir respecto a mensajes principales, datos científicos a destacar, y consideraciones regulatorias para asegurar que cumpla con el código de buenas prácticas de la industria?"
+                </div>
+            </div>
+        </div>
+
+        <div class="dept-example-container" id="medical-examples" style="display: none;">
+            <h3>Ejemplos para Departamento Médico</h3>
+            <div class="prompt-example-card">
+                <h4>Análisis de Literatura Científica</h4>
+                <div class="prompt-text">
+                    "Necesito estructurar una búsqueda bibliográfica sobre la eficacia comparativa de tratamientos para la artritis reumatoide. Ayúdame a definir los criterios PICO adecuados, términos de búsqueda específicos y una metodología para evaluar la calidad de las publicaciones encontradas."
+                </div>
+            </div>
+            <div class="prompt-example-card">
+                <h4>Respuesta a Consultas Médicas</h4>
+                <div class="prompt-text">
+                    "Ayúdame a desarrollar un marco para responder consultas médicas no solicitadas sobre usos off-label de nuestros productos. Necesito asegurar que las respuestas sean científicamente rigurosas, equilibradas y cumplan con las normativas aplicables."
+                </div>
+            </div>
+        </div>
+
+        <div class="dept-example-container" id="production-examples" style="display: none;">
+            <h3>Ejemplos para Producción</h3>
+            <div class="prompt-example-card">
+                <h4>Optimización de Procesos</h4>
+                <div class="prompt-text">
+                    "Necesito identificar posibles puntos de mejora en nuestro proceso de fabricación. Tenemos problemas recurrentes con la homogeneidad en la mezcla de polvos. Sugiere una metodología estructurada para analizar las causas raíz y proponer soluciones que cumplan con el sistema de calidad."
+                </div>
+            </div>
+            <div class="prompt-example-card">
+                <h4>Gestión de OEE</h4>
+                <div class="prompt-text">
+                    "Ayúdame a desarrollar un sistema para calcular y mejorar la Eficiencia General de los Equipos (OEE) en nuestra línea de envasado de comprimidos. Necesito identificar métricas clave, metodología de cálculo y estrategias para abordar las principales causas de pérdida de eficiencia."
+                </div>
+            </div>
+        </div>
+
+        <div class="dept-example-container" id="rrhh-examples" style="display: none;">
+            <h3>Ejemplos para RRHH</h3>
+            <div class="prompt-example-card">
+                <h4>Análisis de Formación</h4>
+                <div class="prompt-text">
+                    "Ayúdame a diseñar un plan de formación enfocado en el sistema de calidad y orientado a nuevos empleados del área de producción. El contenido debe incorporar temas clave como: Normas de higiene personal, Requisitos de vestimenta y uso de EPIs, Comportamiento en zonas clasificadas, uso y comprensión de la documentación básica. El plan debe incluir objetivos de aprendizaje claros, metodología de la enseñanza (formación presencial, e-learning, talleres prácticos) y una propuesta de evaluación final para medir la efectividad del aprendizaje (exámenes, actividades prácticas evaluables)."
+                </div>
+            </div>
+            <div class="prompt-example-card">
+                <h4>Desarrollo de Competencias</h4>
+                <div class="prompt-text">
+                    "Necesito crear una matriz de competencias dirigida al departamento de control de calidad de un laboratorio farmacéutico. Ayúdame en la identificación de las competencias técnicas necesarias, habilidades blandas, definición de niveles de dominio (básico, intermedio, avanzado) y propuestas de metodologías objetivas para evaluar cada competencia."
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+                <!-- Qué NO hacer -->
+                <div class="content-block">
+                    <h2>Qué NO Hacer con ChatGPT</h2>
+                    
+                    <div class="dos-donts">
+                        <div class="donts-card">
+                            <h3>Prácticas a Evitar</h3>
+                            <ul class="donts-list">
+                                <li>
+                                    <h4>Compartir Información Confidencial</h4>
+                                    <p>No incluyas datos de pacientes, composiciones o recetas de productos, información financiera sensible o cualquier dato interno confidencial de la empresa.</p>
+                                </li>
+                                <li>
+                                    <h4>Depender Completamente Sin Verificación</h4>
+                                    <p>No utilices respuestas de ChatGPT para decisiones críticas sin antes pedir referencias y asegurarte de que la información ha sido verificada por expertos o fuentes oficiales. </p>
+                                </li>
+                                <li>
+                                    <h4>Prompts Vagos o Ambiguos</h4>
+                                    <p>Evita preguntas demasiado generales que puedan llevar a respuestas igualmente generales y poco útiles.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Siguiente Paso -->
+                <div class="content-block">
+                    <div class="next-section-preview">
+                        <h3>¿Listo para aplicar estos conceptos?</h3>
+                        <p>En la siguiente sección, descubrirás cómo integrar ChatGPT en tus flujos de trabajo y herramientas cotidianas.</p>
+                        <button class="next-button" onclick="NavigationManager.navigateToSection('casos')">
+                            Continuar a Aplicaciones Prácticas Avanzadas →
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Script para funcionalidad interactiva -->
+                <script>
+                    function toggleExamples(element) {
+                        const examplesDiv = element.nextElementSibling;
+                        const isHidden = examplesDiv.style.display === 'none' || !examplesDiv.style.display;
+                        
+                        examplesDiv.style.display = isHidden ? 'block' : 'none';
+                        element.textContent = isHidden ? 'Ocultar ejemplos' : 'Ver ejemplos';
+                    }
+            
+                    function showDepartmentExamples() {
+                        const select = document.getElementById('deptSelect');
+                        const selectedDept = select.value;
+                        
+                        // Ocultar todos los ejemplos
+                        document.querySelectorAll('.dept-example-container').forEach(container => {
+                            container.style.display = 'none';
+                        });
+                        
+                        // Mostrar los ejemplos del departamento seleccionado
+                        if (selectedDept) {
+                            const deptExamples = document.getElementById(selectedDept + '-examples');
+                            if (deptExamples) {
+                                deptExamples.style.display = 'block';
+                            }
+                        }
+                    }
+                    
+                    // Al cargar, no preseleccionamos ningún departamento
+                window.addEventListener('DOMContentLoaded', () => {
+                const select = document.getElementById('deptSelect');
+                select.selectedIndex = 0; // Asegurar que está seleccionada la primera opción
+              });
+                </script>
+            </section>
+
+            <!-- Potencial en Farma -->
+            <section id="potencial-farma" style="display: none;">
+                <h1>Potencial de la IA en el Sector Farmacéutico</h1>
+            
+                <!-- Introducción -->
+                <div class="content-block">
+                    <div class="intro-banner pharma-banner">
+                        <h2>Transformando la Industria Farmacéutica</h2>
+                        <p>Descubre cómo la IA está revolucionando todos los aspectos del ciclo de vida del medicamento</p>
+                    </div>
+                </div>
+            
+                <!-- Beneficios generales -->
+<div class="content-block">
+    <h2>Beneficios Clave para la Industria Farmacéutica</h2>
+    <p>La integración de la inteligencia artificial en el sector farmacéutico ofrece numerosas ventajas que impactan directamente en la eficiencia, calidad y cumplimiento normativo:</p>
+
+    <div class="benefits-carousel">
+        <div class="carousel-container">
+            <div class="benefit-card">
+                <div class="benefit-icon">⏱️</div>
+                <h3>Eficiencia Operativa</h3>
+                <p>Reducción de hasta un 30% en tiempo dedicado a documentación y tareas administrativas rutinarias.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📊</div>
+                <h3>Análisis de Datos</h3>
+                <p>Capacidad para procesar y extraer patrones de grandes volúmenes de datos de calidad, producción y farmacovigilancia.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📝</div>
+                <h3>Documentación del Sistema de Calidad</h3>
+                <p>Mejora en la consistencia y calidad de la documentación, reduciendo errores y desviaciones.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">⚖️</div>
+                <h3>Cumplimiento Normativo</h3>
+                <p>Asistencia en la interpretación y aplicación de requisitos regulatorios complejos y cambiantes.</p>
+            </div>
+            
+            <!-- Flechas dentro del container pero fuera de las tarjetas -->
+            <div class="carousel-arrows">
+                <span class="arrow prev" onclick="prevSlide()">&#10094;</span>
+                <span class="arrow next" onclick="nextSlide()">&#10095;</span>
+            </div>
+        </div>
+        
+        <!-- Puntos dentro del benefits-carousel pero fuera del container -->
+        <div class="carousel-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+</div>
+    
+                <!-- Aplicaciones por áreas -->
+                <div class="content-block">
+                    <h2>Aplicaciones por Áreas Funcionales</h2>
+                    <p>La IA tiene aplicaciones específicas en cada etapa del ciclo de vida del medicamento o producto sanitario. Explora las oportunidades en tu área:</p>
+            
+                    <div class="areas-tabs">
+                        <div class="tabs-nav">
+                            <div class="tab-button active" onclick="showTab('rd-tab')">Científico</div>
+                            <div class="tab-button" onclick="showTab('quality-tab')">Calidad</div>
+                            <div class="tab-button" onclick="showTab('regulatory-tab')">Registros</div>
+                            <div class="tab-button" onclick="showTab('production-tab')">Producción</div>
+                            <div class="tab-button" onclick="showTab('commercial-tab')">Comercial</div>
+                        </div>
+                        <div class="tabs-content">
+                            <div id="rd-tab" class="tab-pane active">
+                                <h3>Investigación y Desarrollo</h3>
+                                <div class="applications-grid">
+                                    <div class="application-item">
+                                        <h4>Diseño de Moléculas</h4>
+                                        <p>Generación y optimización de candidatos a fármacos mediante simulación y análisis de propiedades farmacológicas.</p>
+                                    </div>
+                                    <div class="application-item">
+                                        <h4>Análisis de Literatura</h4>
+                                        <p>Revisión sistemática de publicaciones científicas para identificar nuevas dianas terapéuticas y mecanismos de acción.</p>
+                                    </div>
+                                    <div class="application-item">
+                                        <h4>Diseño de Estudios</h4>
+                                        <p>Optimización de protocolos de investigación y criterios de inclusión/exclusión para ensayos clínicos.</p>
+                                    </div>
+                                    <div class="application-item">
+                                        <h4>Bioestadística</h4>
+                                        <p>Análisis avanzado de datos experimentales y modelado predictivo de resultados clínicos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="quality-tab" class="tab-pane">
+                                <h3>Control de Calidad y GC</h3>
+                                <div class="applications-grid">
+                                    <div class="application-item">
+                                        <h4>Gestión de Desviaciones</h4>
+                                        <p>Análisis sistemático de causas raíz y generación de planes CAPA basados en aprendizaje de casos previos.</p>
+                                    </div>
+                                    <div class="application-item">
+                                        <h4>Revisión de Datos Analíticos</h4>
+                                        <p>Detección de tendencias y anomalías en datos de control de calidad antes de que generen problemas.</p>
+                                    </div>
+                                    <div class="application-item">
+                                        <h4>Optimización de Métodos</h4>
+                                        <p>Recomendaciones para mejorar la robustez y especificidad de métodos analíticos.</p>
+                                    </div>
+                                    <div class="application-item">
+                                        <h4>Evaluación de Proveedores</h4>
+                                        <p>Análisis integral del desempeño de proveedores basado en múltiples criterios de calidad y cumplimiento.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="regulatory-tab" class="tab-pane">
+                                <h3>Asuntos Regulatorios</h3>
+                                <div class="applications-grid">
+                                    <div class="application-item">
+                                        <h4>Redacción de Documentos</h4>
+                                        <p>Asistencia en la elaboración de documentación regulatoria consistente y alineada con requerimientos específicos por país.</p>
+                                    </div>
+                                    <div class="application-item">
+                                        <h4>Monitoreo Normativo</h4>
+                                        <p>Seguimiento y análisis de cambios en normativas internacionales y su impacto en portfolios de productos.</p>
+                                    </div>
+                                    <div class="application-item">
+                                        <h4>Gestión de Variaciones</h4>
+                                        <p>Evaluación de impacto y preparación de documentación para cambios post-autorización.</p>
+                                    </div>
+                                    <div class="application-item">
+                                        <h4>Respuesta a Deficiencias</h4>
+                                        <p>Estructuración de argumentación técnica y científica para responder a objeciones de autoridades regulatorias.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="production-tab" class="tab-pane">
+                                <h3>Producción y Cadena de Suministro</h3>
+                                <div class="applications-grid">
+                                    <div class="application-item">
+                                        <h4>Optimización de Procesos</h4>
+                                        <p>Análisis multivariante para identificar parámetros críticos y rangos óptimos de operación.</p>
+                                    </div>
+                                    <div class="application-item">
+                                        <h4>Mantenimiento Predictivo</h4>
+                                        <p>Anticipación de fallos en equipos críticos mediante el análisis de patrones de funcionamiento.</p>
+                                    </div>
+                                    <div class="application-item">
+                                        <h4>Planificación de Producción</h4>
+                                        <p>Optimización de secuencias de fabricación considerando múltiples restricciones y prioridades.</p>
+                                    </div>
+                                    <div class="application-item">
+                                        <h4>Gestión de Inventario</h4>
+                                        <p>Predicción de demanda y optimización de niveles de stock para materias primas y productos terminados.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="commercial-tab" class="tab-pane">
+                                <h3>Marketing y Ventas</h3>
+                                <div class="applications-grid">
+                                    <div class="application-item">
+                                        <h4>Segmentación de Clientes</h4>
+                                        <p>Identificación de patrones de prescripción y perfiles de especialistas para optimizar estrategias de acercamiento.</p>
+                                    </div>
+                                    <div class="application-item">
+                                        <h4>Análisis de Mercado</h4>
+                                        <p>Evaluación de tendencias, oportunidades y amenazas basadas en datos de mercado y publicaciones científicas.</p>
+                                    </div>
+                                    <div class="application-item">
+                                        <h4>Desarrollo de Mensajes</h4>
+                                        <p>Creación de contenido especializado adaptado a diferentes audiencias médicas y necesidades informativas.</p>
+                                    </div>
+                                    <div class="application-item">
+                                        <h4>Optimización de Recursos</h4>
+                                        <p>Planificación de actividades comerciales basada en potencial de territorios y retorno esperado.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Casos de éxito -->
+                <div class="content-block">
+                    <h2>Casos de Éxito en la Industria</h2>
+                    <p>Compañías farmacéuticas líderes ya están obteniendo resultados tangibles con la implementación de IA:</p>
+            
+                    <div class="success-cases">
+                        <div class="case-card">
+                            <div class="case-header">
+                                <div class="case-icon">🔬</div>
+                                <h3>Optimización en I+D</h3>
+                            </div>
+                            <p class="case-company">AstraZeneca</p>
+                            <p class="case-description">Redujo en un 30% el tiempo de identificación de biomarcadores utilizando IA para analizar datos genómicos y clínicos.</p>
+                            <p class="case-result"><strong>Resultado:</strong> Aceleración significativa en el desarrollo de terapias dirigidas.</p>
+                        </div>
+                        
+                        <div class="case-card">
+                            <div class="case-header">
+                                <div class="case-icon">⚙️</div>
+                                <h3>Eficiencia en Producción</h3>
+                            </div>
+                            <p class="case-company">GSK</p>
+                            <p class="case-description">Ha desarrollado plataformas de IA para acelerar el descubrimiento de fármacos y analizar grandes volúmenes de datos clínicos, especialmente en colaboración con empresas como Cloud Pharmaceuticals.</p>
+                            <p class="case-result"><strong>Resultado:</strong> Avances en predicción de interacciones moleculares y selección de compuestos más eficaces.</p>
+                        </div>
+                        
+                        <div class="case-card">
+                            <div class="case-header">
+                                <div class="case-icon">📋</div>
+                                <h3>Mejora Documental</h3>
+                            </div>
+                            <p class="case-company">Novartis</p>
+                            <p class="case-description">Utilizó procesamiento de lenguaje natural para estandarizar y optimizar la redacción de PNTs.</p>
+                            <p class="case-result"><strong>Resultado:</strong> 40% menos tiempo en creación de documentación y 25% menos desviaciones por interpretación errónea.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- El potencial en Meiji -->
+                <div class="content-block">
+                    <h2>El Potencial para Meiji Pharma Spain, S.A.</h2>
+                    <p>En base a nuestras características específicas, estas son las oportunidades más prometedoras:</p>
+            
+                    <div class="meiji-opportunities">
+                        <div class="opportunity-item">
+                            <div class="opportunity-number">01</div>
+                            <div class="opportunity-content">
+                                <h3>Optimización de Documentación del Sistema de Calidad</h3>
+                                <p>Automatización en la creación, revisión y actualización de procedimientos normalizados, reduciendo tiempo y mejorando consistencia.</p>
+                                <div class="tag-container">
+                                    <span class="opportunity-tag">Alta Prioridad</span>
+                                    <span class="opportunity-tag">Impacto Inmediato</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="opportunity-item">
+                            <div class="opportunity-number">02</div>
+                            <div class="opportunity-content">
+                                <h3>Análisis de Tendencias en Control de Calidad</h3>
+                                <p>Identificación proactiva de patrones en datos de control de calidad, permitiendo anticipar problemas antes de que generen desviaciones.</p>
+                                <div class="tag-container">
+                                    <span class="opportunity-tag">Valor Estratégico</span>
+                                    <span class="opportunity-tag">Medio Plazo</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="opportunity-item">
+                            <div class="opportunity-number">03</div>
+                            <div class="opportunity-content">
+                                <h3>Optimización de Informes y Reportes</h3>
+                                <p>Generación asistida de informes técnicos, análisis de datos y presentaciones para distintos departamentos y niveles organizacionales.</p>
+                                <div class="tag-container">
+                                    <span class="opportunity-tag">Eficiencia</span>
+                                    <span class="opportunity-tag">Transversal</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="opportunity-item">
+                            <div class="opportunity-number">04</div>
+                            <div class="opportunity-content">
+                                <h3>Apoyo en Cumplimiento Regulatorio</h3>
+                                <p>Asistencia en la interpretación y aplicación de normativas complejas, adaptadas a nuestros productos y mercados específicos.</p>
+                                <div class="tag-container">
+                                    <span class="opportunity-tag">Reducción de Riesgos</span>
+                                    <span class="opportunity-tag">Continuo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Siguiente paso -->
+<div class="content-block">
+    <div class="next-section-preview">
+        <h3>¿Quieres conocer más?</h3>
+        <p>En la siguiente sección, descubrirás cómo integrar la IA con nuestros sistemas de gestión para maximizar su potencial.</p>
+        <button class="next-button" onclick="NavigationManager.navigateToSection('ia-sistemas')">
+            Continuar a IA y Sistemas de Gestión →
+        </button>
+    </div>
+</div>
+            
+                <!-- Script para funcionalidad interactiva -->
+                <script>
+                    // Funcionalidad para el carrusel
+                    let slideIndex = 1;
+                    showSlides(slideIndex);
+            
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }
+            
+                    function showSlides(n) {
+                        const cards = document.querySelectorAll('.benefit-card');
+                        const dots = document.querySelectorAll('.dot');
+                        
+                        if (n > cards.length) {slideIndex = 1}
+                        if (n < 1) {slideIndex = cards.length}
+                        
+                        // Ocultar todas las tarjetas
+                        for (let i = 0; i < cards.length; i++) {
+                            cards[i].style.display = "none";
+                        }
+                        
+                        // Desactivar todos los puntos
+                        for (let i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        
+                        // Mostrar la tarjeta actual y activar el punto correspondiente
+                        cards[slideIndex-1].style.display = "block";
+                        dots[slideIndex-1].className += " active";
+                    }
+            
+                    // Funcionalidad para las pestañas
+                    function showTab(tabId) {
+                        // Ocultar todos los contenidos de pestañas
+                        document.querySelectorAll('.tab-pane').forEach(tab => {
+                            tab.classList.remove('active');
+                        });
+                        
+                        // Desactivar todos los botones de pestañas
+                        document.querySelectorAll('.tab-button').forEach(button => {
+                            button.classList.remove('active');
+                        });
+                        
+                        // Activar la pestaña seleccionada
+                        document.getElementById(tabId).classList.add('active');
+                        
+                        // Activar el botón correspondiente
+                        event.currentTarget.classList.add('active');
+                    }
+                </script>
+            </section>
+ <!-- IA y Sistemas de Gestión -->
+            <section id="ia-sistemas" style="display: none;">
+                <h1>IA y Sistemas de Gestión</h1>
+                
+                <!-- Introducción -->
+                <div class="content-block"> 
+                    <div class="intro-banner systems-banner">
+                        <div class="banner-logo">
+                            <img src="assets/sap-logo.png" alt="SAP Logo" class="sap-logo">
+                        </div>
+                        <h2>Potenciando Nuestros Sistemas con IA</h2>
+                        <p>Optimiza el uso de SAP y otras herramientas corporativas mediante aplicaciones inteligentes</p>
+                    </div>
+                </div>
+            
+                <!-- Introducción explicativa -->
+                <div class="content-block">
+                    <h2>SAP y ChatGPT: Una Combinación Estratégica</h2>
+                    <p>La integración conceptual entre nuestros sistemas de gestión y la inteligencia artificial abre nuevas posibilidades para mejorar la eficiencia operativa sin comprometer la seguridad:</p>
+            
+                    <div class="important-note">
+                        <h3>⚠️ Consideración Importante</h3>
+                        <p>Recuerda que <strong>nunca debes compartir</strong> información confidencial, credenciales, datos sensibles o detalles específicos de configuraciones de seguridad con ChatGPT. Las sugerencias que encontrarás a continuación se centran en optimizar tu trabajo con los sistemas sin necesidad de exponer información sensible.</p>
+                    </div>
+                </div>
+            
+                <!-- Aplicaciones prácticas -->
+                <div class="content-block">
+                    <h2>Aplicaciones Prácticas Para SAP</h2>
+                    <p>Aprovecha ChatGPT para mejorar tu interacción con nuestro sistema SAP actual:</p>
+            
+                    <div class="applications-grid">
+                        <div class="application-sap-card">
+                            <div class="application-icon">
+                                <span class="icon-circle">🔍</span>
+                            </div>
+                            <div class="application-content">
+                                <h3>Optimización de Consultas</h3>
+                                <p>Mejora tus búsquedas y reportes en SAP obteniendo ayuda para estructurar consultas más eficientes.</p>
+                                <div class="prompt-example">
+                                    <span class="prompt-label">Ejemplo de prompt:</span>
+                                    <p class="prompt-text">"Necesito extraer un informe de inventario en SAP. ¿Puedes ayudarme a estructurar paso a paso cómo usar la transacción MC.9 para obtener el movimiento de materiales del último trimestre, organizados por centro y tipo de movimiento?"</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="application-sap-card">
+                            <div class="application-icon">
+                                <span class="icon-circle">📊</span>
+                            </div>
+                            <div class="application-content">
+                                <h3>Análisis de Datos</h3>
+                                <p>Recibe sugerencias para procesar y analizar datos exportados de SAP (sin incluir los datos reales).</p>
+                                <div class="prompt-example">
+                                    <span class="prompt-label">Ejemplo de prompt:</span>
+                                    <p class="prompt-text">"He exportado datos de costes de producción de SAP a Excel. Necesito una fórmula para calcular la desviación porcentual respecto al estándar y crear un sistema de alertas visuales cuando la variación supere el 5%."</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="application-sap-card">
+                            <div class="application-icon">
+                                <span class="icon-circle">📝</span>
+                            </div>
+                            <div class="application-content">
+                                <h3>Documentación de Procesos</h3>
+                                <p>Crea guías y documentación clara sobre procesos específicos de SAP para tu equipo.</p>
+                                <div class="prompt-example">
+                                    <span class="prompt-label">Ejemplo de prompt:</span>
+                                    <p class="prompt-text">"Ayúdame a crear una guía paso a paso para el proceso de cierre mensual en SAP. Necesito incluir las transacciones clave, puntos de verificación y mejores prácticas para garantizar la consistencia de los datos."</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="application-sap-card">
+                            <div class="application-icon">
+                                <span class="icon-circle">🔄</span>
+                            </div>
+                            <div class="application-content">
+                                <h3>Automatización de Tareas</h3>
+                                <p>Identifica oportunidades para automatizar procesos repetitivos mediante soluciones tecnológicas complementarias.</p>
+                                <div class="prompt-example">
+                                    <span class="prompt-label">Ejemplo de prompt:</span>
+                                    <p class="prompt-text">"Necesito automatizar la generación y distribución de informes semanales de SAP. ¿Qué opciones tendría para extraer datos y formatearlos automáticamente sin intervención manual? Explícame en términos sencillos qué herramientas podrían integrarse con SAP para esto."</p>
+                             </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+            
+                <!-- Optimización del Sistema Actual -->
+<div class="content-block">
+    <h2>Optimización del Sistema SAP Actual</h2>
+    <p>Aprovecha ChatGPT para mejorar la eficiencia y experiencia de usuario con nuestro sistema SAP:</p>
+    
+    <div class="hana-migration">
+        <div class="migration-phase">
+            <div class="phase-number">1</div>
+            <div class="phase-content">
+                <h3>Optimización de Procesos</h3>
+                <p>Identifica cuellos de botella y mejora los flujos de trabajo actuales para maximizar la eficiencia operativa.</p>
+                <div class="prompt-example compact">
+                    <p class="prompt-text">"¿Cuáles son las mejores prácticas para optimizar los procesos de gestión de materiales en SAP? Necesito reducir el tiempo de procesamiento manteniendo la precisión en los registros."</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="migration-phase">
+            <div class="phase-number">2</div>
+            <div class="phase-content">
+                <h3>Simplificación de Tareas Repetitivas</h3>
+                <p>Desarrolla estrategias para automatizar tareas manuales frecuentes, mejorando la productividad y reduciendo errores.</p>
+                <div class="prompt-example compact">
+                    <p class="prompt-text">"Necesito encontrar formas de reducir el tiempo dedicado a generar informes semanales en SAP. ¿Qué soluciones prácticas me recomendarías y cómo podría implementarlas sin necesidad de conocimientos técnicos avanzados?"</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="migration-phase">
+            <div class="phase-number">3</div>
+            <div class="phase-content">
+                <h3>Capacitación y Adopción</h3>
+                <p>Mejora la experiencia del usuario y el conocimiento del sistema mediante materiales de capacitación personalizados.</p>
+                <div class="prompt-example compact">
+                    <p class="prompt-text">"Ayúdame a crear un plan de formación para usuarios de finanzas que necesitan maximizar su conocimiento de las transacciones del módulo FI en SAP. ¿Qué estructura debería tener y qué puntos clave debo enfatizar?"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                  
+            
+                <!-- Mejores prácticas -->
+                <div class="content-block">
+                    <h2>Mejores Prácticas de Seguridad</h2>
+                    
+                    <div class="best-practices-security">
+                        <div class="practices-column good-practices">
+                            <h3 class="practices-title">Prácticas Recomendadas</h3>
+                            <div class="practice-item">
+                                <h3>✓ Consultas Generales</h3>
+                                <p>Plantea preguntas conceptuales sobre funcionalidades, procesos o mejores prácticas sin mencionar configuraciones específicas de Meiji.</p>
+                            </div>
+                            
+                            <div class="practice-item">
+                                <h3>✓ Datos Anónimos</h3>
+                                <p>Si necesitas ayuda con análisis de datos, utiliza ejemplos ficticios o datos totalmente anonimizados.</p>
+                            </div>
+                            
+                            <div class="practice-item">
+                                <h3>✓ Verificación</h3>
+                                <p>Siempre verifica las sugerencias con documentación oficial o con el equipo de IT antes de implementarlas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="practices-column avoid-practices">
+                            <h3 class="practices-title">Prácticas a Evitar</h3>
+                            <div class="practice-item avoid">
+                                <h3>✗ No Compartir Credenciales</h3>
+                                <p>Nunca incluyas nombres de usuario, contraseñas, claves de acceso o cualquier otro dato privado en tus mensajes o instrucciones.</p>
+                            </div>
+                            
+                            <div class="practice-item avoid">
+                                <h3>✗ No Datos Sensibles</h3>
+                                <p>Evita compartir información comercial sensible, configuraciones de seguridad o detalles internos específicos.</p>
+                            </div>
+                            
+                            <div class="practice-item avoid">
+                                <h3>✗ No Código de Producción</h3>
+                                <p>No pegues código real de producción que pueda contener lógica propietaria o información sensible.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Siguiente paso -->
+                <div class="content-block">
+                    <div class="next-section-preview">
+                        <h3>¿Quieres conocer más?</h3>
+                        <p>En la siguiente sección, aprenderás sobre los riesgos potenciales y cómo mitigarlos para aprovechar la IA de forma segura y efectiva.</p>
+                        <button class="next-button" onclick="NavigationManager.navigateToSection('riesgos')">
+                            Continuar a Riesgos y Seguridad →
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+           <!-- Riesgos y Seguridad -->
+<section id="riesgos" style="display: none;">
+    <h1>Riesgos y Consideraciones de Seguridad</h1>
+    
+    <!-- Introducción -->
+    <div class="content-block">
+        <div class="intro-banner" style="background: linear-gradient(135deg, #f63b4e, #af1e1e);">
+            <h2>Uso Responsable de la IA</h2>
+            <p>Aprende a identificar y mitigar los riesgos asociados con el uso de ChatGPT en entornos farmacéuticos</p>
+        </div>
+    </div>
+
+    <!-- Matriz de riesgos por departamento -->
+    <div class="content-block">
+        <h2>Matriz de Riesgo por Departamento</h2>
+        <p>Cada departamento enfrenta distintos niveles de riesgo según el tipo de información que maneja habitualmente:</p>
+        
+        <div class="table-responsive">
+            <table class="risk-table">
+                <thead>
+                    <tr>
+                        <th>Departamento</th>
+                        <th>Nivel de Riesgo</th>
+                        <th>Información Sensible Típica</th>
+                        <th>Precauciones Específicas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Científico</td>
+                        <td class="risk-high">Alto</td>
+                        <td>Fórmulas, datos de investigación, patentes en trámite</td>
+                        <td>Uso exclusivo para información bibliográfica y conceptual</td>
+                    </tr>
+                    <tr>
+                        <td>Registros</td>
+                        <td class="risk-high">Alto</td>
+                        <td>Dossiers de registro, comunicaciones con autoridades</td>
+                        <td>Limitar a consultas sobre normativas públicas</td>
+                    </tr>
+                    <tr>
+                        <td>Calidad</td>
+                        <td class="risk-medium">Medio</td>
+                        <td>Datos de lotes, procedimientos de fabricación</td>
+                        <td>Utilizar datos anonimizados y agregados</td>
+                    </tr>
+                    <tr>
+                        <td>Marketing y Ventas</td>
+                        <td class="risk-medium">Medio</td>
+                        <td>Estrategias comerciales, lanzamientos futuros, datos de facturación</td>
+                        <td>Enfocar en aspectos técnicos y científicos generales</td>
+                    </tr>
+                    <tr>
+                        <td>Finanzas</td>
+                        <td class="risk-high">Alto</td>
+                        <td>Datos financieros, proyecciones, costes</td>
+                        <td>Usar ejemplos genéricos sin cifras reales</td>
+                    </tr>
+                    <tr>
+                        <td>RRHH</td>
+                        <td class="risk-medium">Medio</td>
+                        <td>Información de personal, estructura organizativa</td>
+                        <td>Evitar mencionar nombres o posiciones específicas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="info-card">
+            <h4>Clasificación de Niveles de Riesgo</h4>
+            <ul>
+                <li><strong class="risk-high">Alto:</strong> Requiere aprobación previa y revisión posterior por supervisor</li>
+                <li><strong class="risk-medium">Medio:</strong> Precaución especial y verificación de ausencia de datos sensibles</li>
+                <li><strong class="risk-low">Bajo:</strong> Precaución estándar según protocolo general</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Principales riesgos - SIMPLIFICADO -->
+    <div class="content-block">
+        <h2>Principales Riesgos a Considerar</h2>
+        <p>A pesar de sus beneficios, el uso de ChatGPT conlleva ciertos riesgos que debemos gestionar adecuadamente:</p>
+        
+        <div class="two-column-grid">
+            <div class="feature-card">
+                <h4>Privacidad y Confidencialidad</h4>
+                <p>Los datos ingresados en ChatGPT son procesados por servidores externos, lo que plantea consideraciones sobre la protección de información sensible.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h4>Precisión de la Información</h4>
+                <p>La IA puede generar respuestas que parecen correctas pero contienen inexactitudes, especialmente en temas técnicos o regulatorios.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Información que NO debe compartirse -->
+    <div class="content-block">
+        <h2>Información que NUNCA Debe Compartirse</h2>
+        <p>Es fundamental tener claridad sobre qué tipo de información jamás debe ser ingresada en ChatGPT:</p>
+        
+        <div class="alert-box important">
+            <h3>Información Restringida</h3>
+            <ul>
+                <li><strong>Datos de pacientes o estudios clínicos:</strong> Cualquier información que pueda identificar a pacientes o participantes en estudios.</li>
+                <li><strong>Composiciones y procesos propios:</strong> Recetas, procedimientos de fabricación, conocimientos técnicos exclusivos.</li>
+                <li><strong>Información comercial sensible:</strong> Planes de lanzamiento, estrategias de precios, proyecciones financieras.</li>
+                <li><strong>Datos de investigación no publicados:</strong> Resultados preliminares, líneas de investigación en desarrollo.</li>
+                <li><strong>Credenciales y accesos:</strong> Usuarios, contraseñas, claves de acceso o códigos de seguridad de sistemas.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Estrategias de mitigación - SIMPLIFICADO -->
+    <div class="content-block">
+        <h2>Estrategias de Mitigación</h2>
+        <p>Implementa estas medidas para minimizar los riesgos:</p>
+        
+        <div class="two-column-grid">
+            <div class="feature-card">
+                <h4>Anonimización de Datos</h4>
+                <p>Elimina siempre toda información identificativa o sensible antes de utilizar ejemplos reales.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h4>Verificación Cruzada</h4>
+                <p>Contrasta la información recibida con fuentes oficiales y consulta con expertos internos en caso de dudas.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Protocolo de Seguridad al final -->
+    <div class="content-block">
+        <h2>Protocolo de Seguridad para MPS</h2>
+        <p>Para garantizar un uso seguro de ChatGPT en MPS, verifica siempre estos puntos:</p>
+        
+        <div class="instruction-card">
+            <div class="card-header">
+                <h3>Lista de Verificación Pre-Consulta</h3>
+            </div>
+            <div class="card-content">
+                <ul class="verification-list">
+                    <li class="verification-item">
+                        <div class="verification-number">1</div>
+                        <div class="verification-text">¿La consulta contiene información que podría identificar a la empresa o a productos específicos?</div>
+                    </li>
+                    <li class="verification-item">
+                        <div class="verification-number">2</div>
+                        <div class="verification-text">¿Incluye datos internos que no están disponibles públicamente?</div>
+                    </li>
+                    <li class="verification-item">
+                        <div class="verification-number">3</div>
+                        <div class="verification-text">¿Hace referencia a procesos o métodos propios de la compañía?</div>
+                    </li>
+                    <li class="verification-item">
+                        <div class="verification-number">4</div>
+                        <div class="verification-text">¿Contiene información de eventos, lanzamientos o estrategias futuras?</div>
+                    </li>
+                    <li class="verification-item">
+                        <div class="verification-number">5</div>
+                        <div class="verification-text">¿Menciona relaciones con terceros (proveedores, socios, clientes)?</div>
+                    </li>
+                </ul>
+                <p class="tip">💡 Si la respuesta a cualquiera de estas preguntas es "sí", modifica tu consulta para eliminar esa información o utiliza ejemplos genéricos.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Próximos pasos -->
+    <div class="content-block">
+        <div class="next-section-preview">
+            <h3>¿Listo para comprobar tus conocimientos?</h3>
+            <p>En la siguiente sección, pondremos a prueba lo aprendido con un quiz interactivo que evaluará tu comprensión sobre el uso seguro y efectivo de la IA.</p>
+            <button class="next-button" onclick="NavigationManager.navigateToSection('quiz')">
+                Continuar al Quiz Interactivo →
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Aplicaciones Prácticas Avanzadas (antes "Casos Prácticos") -->
+<section id="casos" style="display: none;">
+    <h1>Aplicaciones Prácticas Avanzadas</h1>
+    
+    <!-- Introducción -->
+    <div class="content-block">
+        <div class="intro-banner" style="background: linear-gradient(135deg, #f63b4e, #af1e1e);">
+            <h2>Integrando ChatGPT en tu Flujo de Trabajo</h2>
+            <p>Más allá de consultas puntuales, estos ejemplos muestran cómo <strong>incorporar ChatGPT como herramienta en procesos completos</strong>, aprovechando su capacidad para asistir en diferentes etapas de un mismo flujo de trabajo:</p>
+        </div>
+    </div>
+    
+    <!-- Flujos de trabajo completos -->
+    <div class="content-block">
+        <h2>Flujos de Trabajo Integrados</h2>
+        <p>Más allá de consultas puntuales, estos son ejemplos de cómo integrar ChatGPT en procesos completos:</p>
+        
+        <div class="workflow-example">
+            <h3>Preparación de Auditoría de Calidad</h3>
+            <div class="workflow-steps">
+                <div class="workflow-step">
+                    <div class="workflow-step-header">
+                        <div class="workflow-step-number">1</div>
+                        <h4>Análisis de requisitos</h4>
+                    </div>
+                    <div class="workflow-step-content">
+                        <p class="workflow-prompt">Prompt: "Necesito preparar una auditoría interna de cumplimiento del sistema de calidad Anexo 1. ¿Cuáles son los puntos críticos que debo verificar?"</p>
+                    </div>
+                </div>
+                <div class="workflow-step">
+                    <div class="workflow-step-header">
+                        <div class="workflow-step-number">2</div>
+                        <h4>Creación de checklist</h4>
+                    </div>
+                    <div class="workflow-step-content">
+                        <p class="workflow-prompt">Prompt: "Con base en la respuesta anterior, crea una lista de verificación detallada en formato de tabla con las columnas: Requisito, Referencia normativa, Verificación, Observaciones"</p>
+                    </div>
+                </div>
+                <div class="workflow-step">
+                    <div class="workflow-step-header">
+                        <div class="workflow-step-number">3</div>
+                        <h4>Generación de preguntas para entrevistas</h4>
+                    </div>
+                    <div class="workflow-step-content">
+                        <p class="workflow-prompt">Prompt: "Para cada punto de la checklist, sugiere 2-3 preguntas que podría hacer"</p>
+                    </div>
+                </div>
+                <div class="workflow-step">
+                    <div class="workflow-step-header">
+                        <div class="workflow-step-number">4</div>
+                        <h4>Preparación del informe</h4>
+                    </div>
+                    <div class="workflow-step-content">
+                        <p class="workflow-prompt">Prompt: "Ayúdame a crear una estructura de informe de auditoría que incluya metodología, hallazgos, clasificación de observaciones y plan de acción"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="workflow-example">
+            <h3>Análisis de Datos de Estabilidad</h3>
+            <div class="workflow-steps">
+                <div class="workflow-step">
+                    <div class="workflow-step-header">
+                        <div class="workflow-step-number">1</div>
+                        <h4>Extracción de patrones</h4>
+                    </div>
+                    <div class="workflow-step-content">
+                        <p class="workflow-prompt">Prompt: "He extraído los siguientes datos de estabilidad acelerada para un producto: [Incluir datos genéricos de 3 y 6 meses]. ¿Puedes identificar si hay alguna tendencia preocupante en estos parámetros?"</p>
+                    </div>
+                </div>
+                <div class="workflow-step">
+                    <div class="workflow-step-header">
+                        <div class="workflow-step-number">2</div>
+                        <h4>Análisis estadístico</h4>
+                    </div>
+                    <div class="workflow-step-content">
+                        <p class="workflow-prompt">Prompt: "Con base en estos datos, ¿podrías ayudarme a calcular el tiempo de vida útil? Necesito entender si los 24 meses propuestos son razonables"</p>
+                    </div>
+                </div>
+                <div class="workflow-step">
+                    <div class="workflow-step-header">
+                        <div class="workflow-step-number">3</div>
+                        <h4>Recomendaciones de monitoreo</h4>
+                    </div>
+                    <div class="workflow-step-content">
+                        <p class="workflow-prompt">Prompt: "¿Qué parámetros críticos debería analizar? ¿Hay alguna sugerencia para mejorar el protocolo de estabilidad?"</p>
+                    </div>
+                </div>
+                <div class="workflow-step">
+                    <div class="workflow-step-header">
+                        <div class="workflow-step-number">4</div>
+                        <h4>Elaboración de conclusiones</h4>
+                    </div>
+                    <div class="workflow-step-content">
+                        <p class="workflow-prompt">Prompt: "Ayúdame a redactar conclusiones técnicamente sólidas para este estudio de estabilidad, considerando los requisitos regulatorios de ICH Q1A"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   <!-- Integración con herramientas -->
+<div class="content-block">
+    <h2>Integración con Herramientas Cotidianas</h2>
+    <p>ChatGPT puede potenciar significativamente las herramientas que ya utilizas diariamente:</p>
+    
+    <div class="tools-grid">
+        <div class="tool-card">
+            <div class="tool-icon">📊</div>
+            <h3>Excel</h3>
+            <div class="tool-content">
+                <h4>Posibles aplicaciones:</h4>
+                <ul>
+                    <li>Generación de fórmulas complejas</li>
+                    <li>Creación de macros</li>
+                    <li>Diseño de dashboards</li>
+                    <li>Análisis estadístico</li>
+                </ul>
+                <div class="tool-example">
+                    <p><strong>Ejemplo:</strong> "Necesito una fórmula en Excel que identifique resultados fuera de tendencia en datos de control de calidad. Tengo una columna con valores y quiero destacar los que están más de 2 desviaciones estándar de la media."</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-card">
+            <div class="tool-icon">📝</div>
+            <h3>Word/Documentos</h3>
+            <div class="tool-content">
+                <h4>Posibles aplicaciones:</h4>
+                <ul>
+                    <li>Redacción de procedimientos</li>
+                    <li>Revisión y mejora de textos</li>
+                    <li>Creación de plantillas</li>
+                    <li>Elaboración de informes técnicos</li>
+                </ul>
+                <div class="tool-example">
+                    <p><strong>Ejemplo:</strong> "Ayúdame a estructurar un procedimiento normalizado de trabajo para la calibración de balanzas analíticas, siguiendo las convenciones de documentación del sistema de calidad."</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-card">
+            <div class="tool-icon">📧</div>
+            <h3>Correo Electrónico</h3>
+            <div class="tool-content">
+                <h4>Posibles aplicaciones:</h4>
+                <ul>
+                    <li>Redacción de comunicaciones formales</li>
+                    <li>Resumen de hilos de conversación largos</li>
+                    <li>Traducción de mensajes técnicos</li>
+                    <li>Mejora de claridad y concisión</li>
+                </ul>
+                <div class="tool-example">
+                    <p><strong>Ejemplo:</strong> "Necesito redactar un correo formal a un proveedor de materias primas para solicitar información adicional sobre un certificado de análisis que no cumple con nuestras especificaciones."</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-card">
+            <div class="tool-icon">🗂️</div>
+            <h3>Gestión de Reuniones</h3>
+            <div class="tool-content">
+                <h4>Posibles aplicaciones:</h4>
+                <ul>
+                    <li>Preparación de agendas efectivas</li>
+                    <li>Redacción de actas y minutas</li>
+                    <li>Seguimiento de acuerdos y pendientes</li>
+                    <li>Estructuración de presentaciones</li>
+                </ul>
+                <div class="tool-example">
+                    <p><strong>Ejemplo:</strong> "Ayúdame a crear una estructura para una reunión de revisión de calidad anual de producto. Necesito incluir todos los puntos críticos según las expectativas regulatorias."</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tool-card">
+            <div class="tool-icon">📊</div>
+            <h3>Visualización de Datos</h3>
+            <div class="tool-content">
+                <h4>Posibles aplicaciones:</h4>
+                <ul>
+                    <li>Generación de gráficos y diagramas</li>
+                    <li>Creación de mapas mentales</li>
+                    <li>Estructuración de datos en CSV</li>
+                    <li>Diseño de visualizaciones complejas</li>
+                </ul>
+                <div class="tool-example">
+                    <p><strong>Ejemplo:</strong> "Crea un diagrama de flujo para el proceso de gestión de no conformidades según la norma ISO 13485. Incluye las etapas desde la detección hasta el cierre y verificación de eficacia."</p>
+                </div>
+            </div>
+        </div>
+        <div class="tool-card">
+            <div class="tool-icon">🌐</div>
+            <h3>Traducción y Documentos Multilingües</h3>
+            <div class="tool-content">
+                <h4>Posibles aplicaciones:</h4>
+                <ul>
+                    <li>Traducción técnica de documentos</li>
+                    <li>Redacción en idiomas extranjeros</li>
+                    <li>Revisión de textos traducidos</li>
+                    <li>Adaptación de terminología especializada</li>
+                </ul>
+                <div class="tool-example">
+                    <p><strong>Ejemplo:</strong> "Necesito traducir esta descripción técnica de nuestro producto al inglés, manteniendo la terminología farmacéutica correcta. El texto es: [texto en español]. Por favor, asegúrate de que la traducción sea profesional y conserve todos los detalles técnicos."</p>
+                </div>
+            </div>
+        </div>
+        <div class="tool-card">
+            <div class="tool-icon">🔄</div>
+            <h3>Transformación de Formatos</h3>
+            <div class="tool-content">
+                <h4>Posibles aplicaciones:</h4>
+                <ul>
+                    <li>Conversión de texto a formato tabulado</li>
+                    <li>Estructuración de datos desordenados</li>
+                    <li>Generación de CSV a partir de texto</li>
+                    <li>Creación de códigos para insertarlos en otras herramientas</li>
+                </ul>
+                <div class="tool-example">
+                    <p><strong>Ejemplo:</strong> "Tengo una lista de medicamentos con sus principios activos y dosis en formato texto. Conviértela en formato CSV con columnas para: Nombre comercial, Principio activo, Dosis, Forma farmacéutica."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Uso de documentos - SIMPLIFICADO -->
+<div class="content-block">
+    <h2>Trabajando con Documentos</h2>
+    <p>Las versiones recientes de ChatGPT permiten trabajar con documentos para su análisis:</p>
+    
+    <div class="limitation-box">
+        <div class="limitation-icon">⚠️</div>
+        <div class="limitation-content">
+            <h3>Versión Gratuita vs. Plus</h3>
+            <p>La capacidad de adjuntar y analizar documentos completos está disponible principalmente en ChatGPT Plus. En la versión gratuita, puedes trabajar con extractos o secciones específicas.</p>
+        </div>
+    </div>
+    
+    <div class="examples-container">
+        <div class="example-card good">
+            <h4>Uso Efectivo ✓</h4>
+            <div class="example-content">
+                <p>Extraer información clave o tablas específicas de documentos y solicitarle a ChatGPT que analice estos extractos. Recuerda siempre anonimizar cualquier dato sensible.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Limitaciones y versión premium - SIMPLIFICADO -->
+<div class="content-block">
+    <h2>Otras Consideraciones</h2>
+    
+    <div class="info-card">
+        <h4>Consejos Prácticos</h4>
+        <ul>
+            <li>Inicia nuevas conversaciones para temas distintos para mayor claridad</li>
+            <li>Usa la función "Continuar generando" cuando las respuestas se corten</li>
+            <li>Guarda las conversaciones importantes para futura referencia</li>
+            <li>Consulta con IT si te surgiese alguna duda antes de avanzar</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Siguiente paso -->
+<div class="content-block">
+    <div class="next-section-preview">
+        <h3>¿Quieres conocer más?</h3>
+        <p>En la siguiente sección, exploraremos el potencial transformador de la IA en el sector farmacéutico.</p>
+        <button class="next-button" onclick="NavigationManager.navigateToSection('potencial-farma')">
+            Continuar a Potencial en Farma →
+        </button>
+    </div>
+</div>
+</section>
+
+<!-- Quiz Interactivo -->
+<section id="quiz" style="display: none;">
+    <h1>Quiz Interactivo: Evalúa tus Conocimientos</h1>
+    
+    <!-- Introducción -->
+    <div class="content-block">
+        <div class="intro-banner" style="background: linear-gradient(135deg, #f63b4e, #af1e1e);">
+            <h2>Pon a Prueba lo Aprendido</h2>
+            <p>Completa este cuestionario para evaluar tu comprensión sobre el uso seguro y efectivo de ChatGPT</p>
+        </div>
+    </div>
+    
+    <!-- Instrucciones -->
+    <div class="content-block">
+        <div class="info-card">
+            <h4>Instrucciones</h4>
+            <ul>
+                <li>El quiz consta de 10 preguntas de opción múltiple</li>
+                <li>Selecciona la respuesta que consideres correcta para cada pregunta</li>
+                <li>Al finalizar, obtendrás tu puntuación y recomendaciones personalizadas</li>
+                <li>Tus resultados serán enviados al departamento de IT para el seguimiento del programa</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Formulario del Quiz -->
+    <div class="content-block">
+        <form id="quizForm" class="quiz-container">
+            <!-- Pregunta 1 -->
+            <div class="quiz-question">
+                <h3>1. ¿Cuál de estos tipos de información NO debe compartirse en ChatGPT?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option">
+                        <input type="radio" name="q1" id="q1a" value="a">
+                        <label for="q1a">Preguntas sobre normativas públicas como buenas prácticas de fabricación</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" name="q1" id="q1b" value="b">
+                        <label for="q1b">Consultas bibliográficas sobre enfermedades</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" name="q1" id="q1c" value="c" data-correct="true">
+                        <label for="q1c">Nombres de productos y lotes específicos</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" name="q1" id="q1d" value="d">
+                        <label for="q1d">Solicitudes de redacción de correos genéricos</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pregunta 2 -->
+            <div class="quiz-question">
+                <h3>2. ¿Qué característica hace más efectivo un prompt?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option">
+                        <input type="radio" name="q2" id="q2a" value="a">
+                        <label for="q2a">Ser lo más breve posible</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" name="q2" id="q2b" value="b" data-correct="true">
+                        <label for="q2b">Incluir contexto específico y formato deseado</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" name="q2" id="q2c" value="c">
+                        <label for="q2c">Utilizar términos técnicos complejos</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" name="q2" id="q2d" value="d">
+                        <label for="q2d">Usar mayúsculas para enfatizar</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pregunta 3 -->
+            <div class="quiz-question">
+                <h3>3. Al hablar de datos de producción con ChatGPT, ¿cuál es la práctica correcta?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option">
+                        <input type="radio" name="q3" id="q3a" value="a">
+                        <label for="q3a">Incluir siempre el nombre del producto para mayor claridad</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" name="q3" id="q3b" value="b">
+                        <label for="q3b">Mencionar números de lote específicos para ser preciso</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" name="q3" id="q3c" value="c" data-correct="true">
+                        <label for="q3c">Usar datos anonimizados o ejemplos genéricos</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" name="q3" id="q3d" value="d">
+                        <label for="q3d">Compartir datos completos para obtener análisis precisos</label>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- Pregunta 4 -->
+            <div class="quiz-question">
+                <h3>4. ¿Cuál de las siguientes afirmaciones sobre ChatGPT es correcta?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option">
+                        <input type="radio" name="q4" id="q4a" value="a">
+                        <label for="q4a">Siempre proporciona información 100% precisa</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" name="q4" id="q4b" value="b" data-correct="true">
+                        <label for="q4b">Las respuestas deben ser verificadas con fuentes oficiales</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" name="q4" id="q4c" value="c">
+                        <label for="q4c">Puede reemplazar completamente a un experto en el sector farmacéutico</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" name="q4" id="q4d" value="d">
+                        <label for="q4d">Sólo es útil para tareas creativas, no técnicas</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pregunta 5 -->
+            <div class="quiz-question">
+                <h3>5. ¿Qué técnica es recomendable al trabajar con documentos extensos en la versión gratuita?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option">
+                        <input type="radio" name="q5" id="q5a" value="a" data-correct="true">
+                        <label for="q5a">Dividir el documento en secciones relevantes y enviarlas por separado</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" name="q5" id="q5b" value="b">
+                        <label for="q5b">Compartir hipervínculos al documento completo</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" name="q5" id="q5c" value="c">
+                        <label for="q5c">Enviar capturas de pantalla del documento</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" name="q5" id="q5d" value="d">
+                        <label for="q5d">No es posible trabajar con documentos extensos en ChatGPT</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pregunta 6 -->
+<div class="quiz-question">
+    <h3>6. Si ocurriera una filtración accidental de datos confidenciales, ¿cuál debería ser el primer paso?</h3>
+    <div class="quiz-options">
+        <div class="quiz-option">
+            <input type="radio" name="q6" id="q6a" value="a">
+            <label for="q6a">Eliminar inmediatamente la conversación</label>
+        </div>
+        <div class="quiz-option">
+            <input type="radio" name="q6" id="q6b" value="b" data-correct="true">
+            <label for="q6b">Notificar inmediatamente al responsable de IT y Legal</label>
+        </div>
+        <div class="quiz-option">
+            <input type="radio" name="q6" id="q6c" value="c">
+            <label for="q6c">Continuar la conversación pero evitando más datos sensibles</label>
+        </div>
+        <div class="quiz-option">
+            <input type="radio" name="q6" id="q6d" value="d">
+            <label for="q6d">Cambiar inmediatamente la contraseña de la cuenta</label>
+        </div>
+    </div>
+</div>
+
+<!-- Pregunta 7 -->
+<div class="quiz-question">
+    <h3>7. ¿Cuál es la mejor forma de integrar ChatGPT en los flujos de trabajo existentes?</h3>
+    <div class="quiz-options">
+        <div class="quiz-option">
+            <input type="radio" name="q7" id="q7a" value="a">
+            <label for="q7a">Reemplazar completamente los procesos anteriores</label>
+        </div>
+        <div class="quiz-option">
+            <input type="radio" name="q7" id="q7b" value="b">
+            <label for="q7b">Usarlo exclusivamente para tareas creativas</label>
+        </div>
+        <div class="quiz-option">
+            <input type="radio" name="q7" id="q7c" value="c" data-correct="true">
+            <label for="q7c">Identificar etapas específicas donde puede aportar mayor valor</label>
+        </div>
+        <div class="quiz-option">
+            <input type="radio" name="q7" id="q7d" value="d">
+            <label for="q7d">Utilizarlo únicamente para tareas que nadie quiere hacer</label>
+        </div>
+    </div>
+</div>
+
+<!-- Pregunta 8 -->
+<div class="quiz-question">
+    <h3>8. Al usar ChatGPT para análisis de datos, ¿qué enfoque es más apropiado?</h3>
+    <div class="quiz-options">
+        <div class="quiz-option">
+            <input type="radio" name="q8" id="q8a" value="a" data-correct="true">
+            <label for="q8a">Solicitar metodología y fórmulas para aplicar por nuestra cuenta</label>
+        </div>
+        <div class="quiz-option">
+            <input type="radio" name="q8" id="q8b" value="b">
+            <label for="q8b">Aceptar los análisis sin verificación adicional</label>
+        </div>
+        <div class="quiz-option">
+            <input type="radio" name="q8" id="q8c" value="c">
+            <label for="q8c">Evitar completamente su uso para cualquier análisis cuantitativo</label>
+        </div>
+        <div class="quiz-option">
+            <input type="radio" name="q8" id="q8d" value="d">
+            <label for="q8d">Compartir la base de datos completa para mayor precisión</label>
+        </div>
+    </div>
+</div>
+
+<!-- Pregunta 9 -->
+<div class="quiz-question">
+    <h3>9. ¿Qué nivel de riesgo tiene el departamento de Finanzas según la matriz presentada?</h3>
+    <div class="quiz-options">
+        <div class="quiz-option">
+            <input type="radio" name="q9" id="q9a" value="a">
+            <label for="q9a">Bajo</label>
+        </div>
+        <div class="quiz-option">
+            <input type="radio" name="q9" id="q9b" value="b">
+            <label for="q9b">Medio</label>
+        </div>
+        <div class="quiz-option">
+            <input type="radio" name="q9" id="q9c" value="c" data-correct="true">
+            <label for="q9c">Alto</label>
+        </div>
+        <div class="quiz-option">
+            <input type="radio" name="q9" id="q9d" value="d">
+            <label for="q9d">No aparece en la matriz</label>
+        </div>
+    </div>
+</div>
+
+<!-- Pregunta 10 -->
+<div class="quiz-question">
+    <h3>10. ¿Cuál de estas acciones representa una violación de las políticas de uso seguro?</h3>
+    <div class="quiz-options">
+        <div class="quiz-option">
+            <input type="radio" name="q10" id="q10a" value="a">
+            <label for="q10a">Solicitar ayuda para redactar un correo formal</label>
+        </div>
+        <div class="quiz-option">
+            <input type="radio" name="q10" id="q10b" value="b">
+            <label for="q10b">Pedir información sobre normativas públicas de las buenas prácticas de fabricación</label>
+        </div>
+        <div class="quiz-option">
+            <input type="radio" name="q10" id="q10c" value="c">
+            <label for="q10c">Solicitar ayuda con fórmulas de Excel</label>
+        </div>
+        <div class="quiz-option">
+            <input type="radio" name="q10" id="q10d" value="d" data-correct="true">
+            <label for="q10d">Compartir credenciales para acceder a un sistema</label>
+        </div>
+    </div>
+</div>
+            
+<!-- Información de usuario para seguimiento -->
+<div class="quiz-user-info">
+    <h3>Información para Seguimiento</h3>
+    <div class="form-group">
+        <label for="quizEmail">Correo Electrónico Corporativo:</label>
+        <input type="email" id="quizEmail" name="email" required pattern="[a-z0-9._%+-]+@meiji\.es$">
+    </div>
+    <div class="form-group">
+        <label for="quizDepartment">Departamento:</label>
+        <select id="quizDepartment" name="department" required>
+            <option value="">Selecciona tu departamento</option>
+            <option value="quality">Control de Calidad</option>
+            <option value="development">Desarrollo de Negocio</option>
+            <option value="finance">Finanzas</option>
+            <option value="gc">Garantía de Calidad</option>
+            <option value="it">IT</option>
+            <option value="id">Científico</option>
+            <option value="legal">Legal</option>
+            <option value="marketing">Marketing y Ventas</option>
+            <option value="medical">Departamento Médico</option>
+            <option value="production">Producción</option>
+            <option value="rrhh">RRHH</option>
+        </select>
+    </div>
+</div>
+            
+<!-- Botón de Envío -->
+<div class="quiz-submit">
+    <button type="submit" class="submit-button">Enviar Respuestas</button>
+</div>
+        </form>
+        <input type="hidden" id="scriptURL" value="https://script.google.com/macros/s/AKfycbyd3o3_kKcq2V_3RpVZiXPQs5m5fO3WWTzTF7l9W7V7-w3peNXK_4VNGoRJRsqd4KG72Q/exec">
+    </div>
+    
+    <!-- Resultados (inicialmente ocultos) -->
+    <div class="content-block" id="quizResults" style="display: none;">
+        <div class="results-container">
+            <h2>Resultados del Quiz</h2>
+            <div class="score-display">
+                <div class="score-circle">
+                    <span id="scoreValue">0</span>%
+                </div>
+                <p id="scoreMessage">Mensaje basado en la puntuación</p>
+            </div>
+            
+            <div class="results-details">
+                <h3>Respuestas Correctas: <span id="correctAnswers">0</span>/10</h3>
+                <div id="questionsReview"></div>
+            </div>
+            
+            <div class="recommendations">
+                <h3>Recomendaciones Personalizadas</h3>
+                <div id="recommendationsContent"></div>
+            </div>
+            
+         <!-- Solo mensaje de redirección -->
+<div class="results-actions">
+    <p>Serás redirigido en unos segundos...</p>
+</div>
+        </div>
+        
+        <div class="completion-message">
+            <h3>¡Felicidades por completar la Guía!</h3>
+            <p>Has finalizado con éxito todas las secciones de la Guía de IA para el Sector Farmacéutico. Tus resultados han sido enviados al departamento de IT para seguimiento.</p>
+            <p>No dudes en volver a consultar cualquier sección cuando lo necesites.</p>
+        </div>
+    </div>
+</section>
+
+    <script src="js/main.js"></script>
+
+    <!-- Añade este código justo antes del cierre del tag </body> en main.html -->
+
+<!-- Popup/Modal -->
+<div id="welcomePopup" class="popup-overlay">
+    <div class="popup-container">
+        <div class="popup-header">
+            <h2>⚠️ Aviso Importante</h2>
+        </div>
+        <div class="popup-content">
+            <p>Antes de comenzar a utilizar herramientas de IA en el entorno de trabajo, es <strong>indispensable</strong> que:</p>
+            
+            <ol>
+                <li>Leas completamente esta guía para comprender los beneficios y riesgos asociados</li>
+                <li>Completes y apruebes el test de evaluación de conocimientos</li>
+                <li>Sigas siempre las recomendaciones y protocolos de seguridad establecidos</li>
+            </ol>
+            
+            <p>El uso inadecuado de la IA puede generar riesgos para la confidencialidad de la información y el cumplimiento normativo.</p>
+            
+            <div class="popup-actions">
+                <button id="acceptBtn" class="popup-button primary">Entendido, quiero continuar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Estilos para el Popup -->
+<style>
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    
+    .popup-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .popup-container {
+        background: white;
+        width: 90%;
+        max-width: 600px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        animation: popup-appear 0.4s ease-out;
+    }
+    
+    @keyframes popup-appear {
+        0% { transform: scale(0.8); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+    
+    .popup-header {
+        background: #dc2626;
+        color: white;
+        padding: 1rem 1.5rem;
+    }
+    
+    .popup-header h2 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    
+    .popup-content {
+        padding: 1.5rem;
+    }
+    
+    .popup-content p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+    
+    .popup-content ol {
+        margin: 1.5rem 0;
+        padding-left: 1.5rem;
+    }
+    
+    .popup-content li {
+        margin-bottom: 0.8rem;
+        line-height: 1.5;
+    }
+    
+    .popup-actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    
+    .popup-button {
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        border: none;
+        font-size: 1rem;
+    }
+    
+    .popup-button.primary {
+        background: #dc2626;
+        color: white;
+    }
+    
+    .popup-button.primary:hover {
+        background: #b91c1c;
+    }
+</style>
+
+<!-- Script para controlar el Popup -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Siempre mostrar el popup, sin verificar localStorage
+        const popup = document.getElementById('welcomePopup');
+        
+        // Pequeño retraso para mejor experiencia
+        setTimeout(function() {
+            popup.classList.add('active');
+        }, 500);
+        
+        // Manejar el botón de aceptar
+        document.getElementById('acceptBtn').addEventListener('click', function() {
+            popup.classList.remove('active');
+            // Ya no guardamos nada en localStorage
+        });
+    });
+</script>
+
+</body>
+</html>

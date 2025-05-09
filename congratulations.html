@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Felicidades! - IA en Farma: MPS</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Agregar las bibliotecas de generación de PDF sin afectar el diseño original -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        .congrats-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .success-icon {
+            font-size: 5rem;
+            color: #059669;
+            margin-bottom: 2rem;
+        }
+        
+        .congrats-title {
+            color: #059669;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .certificate-preview {
+            border: 2px dashed #e5e7eb;
+            padding: 2rem;
+            margin: 2rem 0;
+            background: #f9fafb;
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .certificate-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .certificate-content {
+            border: 15px solid #dc2626;
+            padding: 3rem;
+            position: relative;
+            background: white;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 800px;
+            box-sizing: border-box;
+        }
+
+        .certificate-header {
+            margin-bottom: 2rem;
+        }
+
+        .certificate-logo {
+            max-width: 200px;
+            margin-bottom: 1rem;
+        }
+
+        .certificate-name {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #dc2626;
+            margin: 1.5rem 0;
+            border-bottom: 1px solid #dc2626;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .certificate-course {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            color: #333;
+        }
+
+        .certificate-signature {
+            margin-top: 4rem;
+        }
+
+        .signature-line {
+            width: 200px;
+            height: 1px;
+            background: #333;
+            margin: 0 auto 0.5rem auto;
+        }
+        
+        .action-button {
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.2s;
+        }
+
+        .action-button.primary {
+            background: #dc2626;
+            color: white;
+        }
+
+        .action-button.primary:hover {
+            background: #b91c1c;
+        }
+
+        .action-button.secondary {
+            background: #f1f5f9;
+            color: #4b5563;
+            border: 1px solid #e5e7eb;
+        }
+
+        .action-button.secondary:hover {
+            background: #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="assets/logo.png" alt="Meiji Logo" class="logo">
+        </header>
+
+        <main>
+            <div class="congrats-container">
+                <div class="success-icon">🏆</div>
+                <h1 class="congrats-title">¡Felicidades!</h1>
+                <p>Has completado con éxito la evaluación de conocimientos sobre IA en el sector farmacéutico.</p>
+                
+                <div class="certificate-preview" id="certificateContainer">
+                    <div class="certificate-content">
+                        <div class="certificate-header">
+                            <img src="assets/logo.png" alt="Meiji Logo" class="certificate-logo" id="logoImage">
+                            <h2>Certificado de Capacitación</h2>
+                        </div>
+                        <p>Este documento certifica que</p>
+                        <p class="certificate-name" id="userName">Nombre del Usuario</p>
+                        <p>ha completado satisfactoriamente la formación</p>
+                        <h2 class="certificate-course">"IA en Farma: Manual de Buenas Prácticas y Casos de Éxito"</h2>
+                        <p>Fecha: <span id="certDate">26 de febrero de 2025</span></p>
+                        <div class="certificate-signature">
+                            <div class="signature-line"></div>
+                            <p>© Meiji Pharma Spain, S.A. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p>Tus conocimientos te permitirán utilizar la IA de manera segura y efectiva, potenciando tu desarrollo profesional y contribuyendo a la innovación en Meiji Pharma Spain, S.A.</p>
+                
+                <h3>Próximos Pasos</h3>
+                <ul style="text-align: left; display: inline-block;">
+                    <li>Comienza a implementar lo aprendido en tus tareas diarias</li>
+                    <li>Comparte tus experiencias con el comité de transformación digital</li>
+                    <li>Explora casos de uso específicos para tu área</li>
+                    <li>Mantente atento a futuras actualizaciones y capacitaciones</li>
+                </ul>
+                
+                <div class="action-buttons">
+                    <button class="action-button primary" id="downloadCertBtn">Descargar Certificado</button>
+                    <button class="action-button secondary" onclick="window.location.href='main.html'">Volver al Manual</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            © 2025 Meiji Pharma Spain, S.A. Todos los derechos reservados.
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener datos del usuario
+            const userName = localStorage.getItem('userName') || 'Usuario';
+            
+            // Mostrar nombre en el certificado
+            document.getElementById('userName').textContent = userName;
+            
+            // Fecha actual
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('certDate').textContent = today.toLocaleDateString('es-ES', options);
+            
+            // Botón de descarga
+            document.getElementById('downloadCertBtn').addEventListener('click', function() {
+                // Verificar que las bibliotecas están cargadas
+                if (typeof window.jspdf === 'undefined') {
+                    console.error("Error: jsPDF no está disponible");
+                    alert("Error al cargar las bibliotecas necesarias. Por favor, inténtelo de nuevo o contacte con soporte.");
+                    return;
+                }
+                
+                // Para asegurar que se captura el certificado correctamente
+                const certificateElement = document.querySelector('.certificate-content');
+                
+                // 1. Crear una copia del certificado para manipularlo sin afectar la visualización
+                const certificateCopy = certificateElement.cloneNode(true);
+                certificateCopy.style.margin = '0';
+                certificateCopy.style.boxSizing = 'border-box';
+                certificateCopy.style.width = '100%';
+                certificateCopy.style.height = 'auto';
+                
+                // 2. Crear un contenedor temporal fuera de la vista
+                const tempContainer = document.createElement('div');
+                tempContainer.style.position = 'fixed';
+                tempContainer.style.left = '-9999px';
+                tempContainer.style.top = '0';
+                tempContainer.appendChild(certificateCopy);
+                document.body.appendChild(tempContainer);
+                
+                // Esperar a que las imágenes se carguen completamente en la copia
+                const logoImg = certificateCopy.querySelector('#logoImage');
+                
+                // Una vez esté todo listo, generar el PDF
+                const generatePDF = function() {
+                    html2canvas(certificateCopy, {
+                        scale: 2, // Mayor calidad
+                        useCORS: true,
+                        allowTaint: true,
+                        backgroundColor: '#ffffff',
+                        logging: true
+                    }).then(function(canvas) {
+                        try {
+                            // Crear el PDF
+                            const { jsPDF } = window.jspdf;
+                            const pdf = new jsPDF('landscape', 'mm', 'a4');
+                            
+                            // Ajustar el canvas al tamaño del PDF
+                            const imgWidth = pdf.internal.pageSize.getWidth();
+                            const imgHeight = pdf.internal.pageSize.getHeight();
+                            
+                            // Añadir la imagen del canvas al PDF
+                            const imgData = canvas.toDataURL('image/jpeg', 1.0);
+                            pdf.addImage(imgData, 'JPEG', 0, 0, imgWidth, imgHeight);
+                            
+                            // Guardar el PDF
+                            pdf.save('Certificado_IA_en_Farma_' + userName.replace(/\s+/g, '_') + '.pdf');
+                            
+                            // Eliminar el contenedor temporal cuando terminemos
+                            document.body.removeChild(tempContainer);
+                            
+                        } catch (error) {
+                            console.error("Error al generar el PDF:", error);
+                            alert("Hubo un problema al generar el PDF: " + error.message);
+                            document.body.removeChild(tempContainer);
+                        }
+                    }).catch(function(error) {
+                        console.error("Error al crear el canvas:", error);
+                        alert("Error al generar el certificado: " + error.message);
+                        document.body.removeChild(tempContainer);
+                    });
+                };
+                
+                // Comprobar si la imagen del logo está cargada
+                if (logoImg.complete) {
+                    generatePDF();
+                } else {
+                    logoImg.onload = generatePDF;
+                    logoImg.onerror = function() {
+                        console.error("Error al cargar la imagen del logo");
+                        alert("No se pudo cargar el logo. El certificado podría generarse sin él.");
+                        generatePDF();
+                    };
+                }
+            });
+        });
+    </script>
+</body>
+</html>

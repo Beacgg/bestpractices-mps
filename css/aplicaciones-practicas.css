@@ -1,0 +1,282 @@
+/* Estilos para Aplicaciones Prácticas Avanzadas */
+
+/* Estilos para el contenedor del workflow */
+.workflow-example {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.workflow-example h3 {
+    background: #f1f5f9;
+    padding: 1rem 1.5rem;
+    margin: 0;
+    border-bottom: 1px solid #e5e7eb;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.workflow-steps {
+    padding: 1.5rem;
+}
+
+/* Estilos para los pasos individuales */
+.workflow-step {
+    position: relative;
+    padding-left: 3.5rem;
+    margin-bottom: 1.5rem;
+    border-left: none;
+}
+
+.workflow-step:last-child {
+    margin-bottom: 0;
+}
+
+/* Número de paso */
+.workflow-step-header {
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.workflow-step-number {
+    position: absolute;
+    left: -3.5rem;
+    top: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.workflow-step h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    padding-top: 0.25rem;
+}
+
+/* Conectores entre pasos */
+.workflow-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 2.5rem;
+    left: -2.25rem;
+    bottom: -1rem;
+    width: 2px;
+    background-color: var(--primary-light);
+}
+
+/* Estilo para el prompt */
+.workflow-prompt {
+    background: #f8fafc;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    margin: 0;
+    border: 1px solid #e5e7eb;
+}
+
+/* Estilos para tarjetas de herramientas */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.tool-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tool-icon {
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 0;
+    background: #f1f5f9;
+}
+
+.tool-card h3 {
+    text-align: center;
+    margin: 0;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    background: #f8fafc;
+    color: var(--primary-color);
+}
+
+.tool-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-content h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.tool-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.tool-example {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 4px;
+    border-left: 3px solid var(--primary-color);
+    margin-top: auto;
+}
+
+/* Estilos para el cuadro de limitaciones */
+.limitation-box {
+    display: flex;
+    background: #fff5f5;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+    align-items: flex-start;
+    border: 1px solid #fee2e2;
+}
+
+.limitation-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.limitation-content {
+    flex: 1;
+}
+
+.limitation-content h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.limitation-content p {
+    margin-bottom: 0;
+}
+
+/* Estilos para opciones de documentos */
+.document-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.option-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.option-card h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.option-card ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.option-card li {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para ejemplos */
+.examples-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+/* Estilos para limitaciones */
+.limitations-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.limitation-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.limitation-item h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.limitation-item ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.limitation-item li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .tools-grid,
+    .document-options,
+    .limitations-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .tools-grid,
+    .document-options,
+    .examples-container,
+    .limitations-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .workflow-step {
+        padding-left: 2rem;
+    }
+    
+    .workflow-step-number {
+        left: -2rem;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+    
+    .workflow-step:not(:last-child)::after {
+        left: -1rem;
+    }
+}
